@@ -1,7 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://x4bnweudk8vs"]
+[gd_scene load_steps=5 format=3 uid="uid://x4bnweudk8vs"]
 
+[ext_resource type="Script" path="res://screens/play/play.gd" id="1_e80q3"]
 [ext_resource type="PackedScene" uid="uid://cbsuvkdplnnqe" path="res://components/background.tscn" id="1_osefx"]
+[ext_resource type="Texture2D" uid="uid://d3p8w13n2bvdh" path="res://assets/piggy_silver_double.png" id="3_7i24t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oj5t8"]
+size = Vector2(73, 111)
 
 [node name="PlayContainer" type="Node2D"]
+script = ExtResource("1_e80q3")
 
-[node name="TextureRect" parent="." instance=ExtResource("1_osefx")]
+[node name="Background" parent="." instance=ExtResource("1_osefx")]
+
+[node name="Piggy" type="AnimatableBody2D" parent="."]
+position = Vector2(250, 371)
+
+[node name="Sprite2D" type="Sprite2D" parent="Piggy"]
+position = Vector2(0, -4.5)
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("3_7i24t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Piggy"]
+position = Vector2(-14.5, -137.5)
+shape = SubResource("RectangleShape2D_oj5t8")
