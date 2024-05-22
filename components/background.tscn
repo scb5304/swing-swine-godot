@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cbsuvkdplnnqe"]
+
+[ext_resource type="Texture2D" uid="uid://dw84oyssktx57" path="res://assets/backdrop_sky.jpg" id="1_o8dne"]
+
+[node name="TextureRect" type="TextureRect"]
+offset_right = 481.0
+offset_bottom = 721.0
+texture = ExtResource("1_o8dne")
+expand_mode = 5

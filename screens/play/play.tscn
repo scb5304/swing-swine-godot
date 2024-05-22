@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://x4bnweudk8vs"]
+
+[ext_resource type="PackedScene" uid="uid://cbsuvkdplnnqe" path="res://components/background.tscn" id="1_osefx"]
+
+[node name="PlayContainer" type="Node2D"]
+
+[node name="TextureRect" parent="." instance=ExtResource("1_osefx")]
