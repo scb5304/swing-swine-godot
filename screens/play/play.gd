@@ -5,19 +5,20 @@ extends Node2D
 func _ready():
 	pass # Replace with function body.
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	$Piggy/Sprite2D.rotation += 1 * delta
-	$Piggy.rotation = 1 * $Piggy/Sprite2D.rotation
+	$Piggy.rotation += 0.02
 	pass
 
 
-func _on_piggy_body_entered(body):
-	print("here")
-	pass # Replace with function body.
 
+func _on_right_coin_coin_hit():
+	print("ouch")
+	# $RightCoin.visible = false
+	$RightCoin.collision_mask = 5
+	$RightCoin.set_deferred("disabled", true)
+	$RightCoin.set_deferred("freeze", true)
+	$RightCoin.set_freeze_mode(RigidBody2D.FREEZE_MODE_STATIC)
+	# Reset position?
 
-func _on_piggy_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
-	print("here again")
 	pass # Replace with function body.
