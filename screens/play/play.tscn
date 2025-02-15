@@ -27,7 +27,29 @@ texture = ExtResource("3_7i24t")
 position = Vector2(-14.5, -137.5)
 shape = SubResource("RectangleShape2D_oj5t8")
 
-[node name="RightCoin" parent="." instance=ExtResource("4_3hwp3")]
-position = Vector2(384, 369)
+[node name="Coins" type="Node" parent="."]
 
-[connection signal="coinHit" from="RightCoin" to="." method="_on_right_coin_coin_hit"]
+[node name="RightCoin" parent="Coins" instance=ExtResource("4_3hwp3")]
+visible = true
+position = Vector2(382, 363)
+script = null
+
+[node name="BottomCoin" parent="Coins" instance=ExtResource("4_3hwp3")]
+visible = true
+position = Vector2(250, 512)
+script = null
+
+[node name="LeftCoin" parent="Coins" instance=ExtResource("4_3hwp3")]
+visible = true
+position = Vector2(112, 363)
+script = null
+
+[node name="TopCoin" parent="Coins" instance=ExtResource("4_3hwp3")]
+visible = true
+position = Vector2(250, 236)
+script = null
+
+[connection signal="body_entered" from="Coins/RightCoin" to="." method="_on_right_coin_body_entered"]
+[connection signal="body_entered" from="Coins/BottomCoin" to="." method="_on_bottom_coin_body_entered"]
+[connection signal="body_shape_entered" from="Coins/LeftCoin" to="." method="_on_left_coin_body_shape_entered"]
+[connection signal="body_shape_entered" from="Coins/TopCoin" to="." method="_on_top_coin_body_shape_entered"]

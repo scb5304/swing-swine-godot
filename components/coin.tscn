@@ -6,11 +6,8 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_nnu0v"]
 radius = 17.72
 
-[node name="Coin" type="RigidBody2D"]
-gravity_scale = 0.0
-can_sleep = false
-max_contacts_reported = 10
-contact_monitor = true
+[node name="Coin" type="Area2D"]
+visible = false
 script = ExtResource("1_dlbmr")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -19,5 +16,3 @@ texture = ExtResource("1_4ual3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_nnu0v")
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
