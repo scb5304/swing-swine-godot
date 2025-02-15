@@ -9,6 +9,7 @@ func onAnyCoinHit(coin):
 	print("Hit " + coin.color)
 	score += 1
 	speed += 0.04
+	$Score.text = str(score)
 	if $Piggy.color != coin.color:
 		print("Game over!")
 		speed = 0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://x4bnweudk8vs"]
+[gd_scene load_steps=8 format=3 uid="uid://x4bnweudk8vs"]
 
 [ext_resource type="Script" path="res://screens/play/play.gd" id="1_e80q3"]
 [ext_resource type="PackedScene" uid="uid://cbsuvkdplnnqe" path="res://components/background.tscn" id="1_osefx"]
@@ -8,6 +8,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oj5t8"]
 size = Vector2(73, 111)
+
+[sub_resource type="LabelSettings" id="LabelSettings_lrqgu"]
+font_size = 48
 
 [node name="PlayContainer" type="Node2D"]
 script = ExtResource("1_e80q3")
@@ -40,6 +43,14 @@ texture = ExtResource("3_7i24t")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Piggy"]
 position = Vector2(-14.5, -137.5)
 shape = SubResource("RectangleShape2D_oj5t8")
+
+[node name="Score" type="Label" parent="."]
+offset_left = 49.0
+offset_top = 31.0
+offset_right = 208.0
+offset_bottom = 98.0
+text = "0"
+label_settings = SubResource("LabelSettings_lrqgu")
 
 [connection signal="body_entered" from="Coins/RightCoin" to="." method="_on_right_coin_body_entered"]
 [connection signal="body_entered" from="Coins/BottomCoin" to="." method="_on_bottom_coin_body_entered"]
