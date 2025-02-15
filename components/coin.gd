@@ -1,10 +1,15 @@
 extends Area2D
 
-# Called when the node enters the scene tree for the first time.
+var color = ""
+
 func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+	randomize_color()
+	
+func randomize_color():
+	var coin_flip = randi() % 2
+	if coin_flip == 0:
+		$Sprite2D.texture = preload("res://assets/coin_gold.png")
+		color = "Gold"
+	else:
+		$Sprite2D.texture = preload("res://assets/coin_silver.png")
+		color = "Silver"

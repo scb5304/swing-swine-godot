@@ -25,6 +25,18 @@ window/size/viewport_height=720
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
 
+[input]
+
+touch_or_click={
+"deadzone": 0.5,
+"events": [null, Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(165, 10),"global_position":Vector2(174, 56),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
+}
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
 [rendering]
 
 renderer/rendering_method="mobile"

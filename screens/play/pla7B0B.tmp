@@ -14,20 +14,6 @@ script = ExtResource("1_e80q3")
 
 [node name="Background" parent="." instance=ExtResource("1_osefx")]
 
-[node name="Coins" type="Node" parent="."]
-
-[node name="RightCoin" parent="Coins" instance=ExtResource("4_3hwp3")]
-position = Vector2(382, 363)
-
-[node name="BottomCoin" parent="Coins" instance=ExtResource("4_3hwp3")]
-position = Vector2(250, 512)
-
-[node name="LeftCoin" parent="Coins" instance=ExtResource("4_3hwp3")]
-position = Vector2(112, 363)
-
-[node name="TopCoin" parent="Coins" instance=ExtResource("4_3hwp3")]
-position = Vector2(250, 236)
-
 [node name="Piggy" type="CharacterBody2D" parent="."]
 position = Vector2(250, 371)
 script = ExtResource("3_wfwb7")
@@ -40,6 +26,28 @@ texture = ExtResource("3_7i24t")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Piggy"]
 position = Vector2(-14.5, -137.5)
 shape = SubResource("RectangleShape2D_oj5t8")
+
+[node name="Coins" type="Node" parent="."]
+
+[node name="RightCoin" parent="Coins" instance=ExtResource("4_3hwp3")]
+visible = true
+position = Vector2(382, 363)
+script = null
+
+[node name="BottomCoin" parent="Coins" instance=ExtResource("4_3hwp3")]
+visible = true
+position = Vector2(250, 512)
+script = null
+
+[node name="LeftCoin" parent="Coins" instance=ExtResource("4_3hwp3")]
+visible = true
+position = Vector2(112, 363)
+script = null
+
+[node name="TopCoin" parent="Coins" instance=ExtResource("4_3hwp3")]
+visible = true
+position = Vector2(250, 236)
+script = null
 
 [connection signal="body_entered" from="Coins/RightCoin" to="." method="_on_right_coin_body_entered"]
 [connection signal="body_entered" from="Coins/BottomCoin" to="." method="_on_bottom_coin_body_entered"]
