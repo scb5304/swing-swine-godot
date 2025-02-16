@@ -1,23 +1,71 @@
-[gd_scene load_steps=4 format=3 uid="uid://h2uyoy5ibchv"]
+[gd_scene load_steps=7 format=3 uid="uid://h2uyoy5ibchv"]
 
 [ext_resource type="Texture2D" uid="uid://dw84oyssktx57" path="res://assets/backdrop_sky.jpg" id="1_5lk0a"]
-[ext_resource type="PackedScene" uid="uid://dw22whed4wx1k" path="res://components/menu-button/menu_button.tscn" id="2_stjiq"]
-[ext_resource type="Script" path="res://screens/gameover/menu_button_play_again.gd" id="3_tsn8y"]
+[ext_resource type="Script" path="res://screens/gameover/game_over.gd" id="1_20b8p"]
+[ext_resource type="Texture2D" uid="uid://bxoys2ixkxswq" path="res://assets/piggy_coin_count.png" id="2_as6nk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ksjvx"]
+font_size = 40
+font_color = Color(1, 0.796944, 0.988073, 1)
+shadow_color = Color(0, 0, 0, 0.65098)
+
+[sub_resource type="LabelSettings" id="LabelSettings_5imc5"]
+font_size = 50
+shadow_color = Color(0, 0, 0, 0.447059)
+
+[sub_resource type="LabelSettings" id="LabelSettings_adjc2"]
+font_size = 44
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 0.34902)
+shadow_offset = Vector2(1.5, 1)
 
 [node name="GameOverContainer" type="Node2D"]
+script = ExtResource("1_20b8p")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 offset_right = 480.0
 offset_bottom = 720.0
 texture = ExtResource("1_5lk0a")
 expand_mode = 5
 
-[node name="PlayAgainButton" parent="." instance=ExtResource("2_stjiq")]
-offset_left = 115.0
-offset_top = 173.0
-offset_right = 358.0
-offset_bottom = 230.0
-script = ExtResource("3_tsn8y")
+[node name="NiceText" type="Label" parent="."]
+offset_left = 41.0
+offset_top = 228.0
+offset_right = 450.0
+offset_bottom = 291.0
+text = "Nice"
+label_settings = SubResource("LabelSettings_ksjvx")
+horizontal_alignment = 1
+
+[node name="YouGotText" type="Label" parent="."]
+offset_left = 2.0
+offset_top = 295.0
+offset_right = 478.0
+offset_bottom = 538.0
+text = "You got 69 coins!"
+label_settings = SubResource("LabelSettings_5imc5")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="PlayAgainButton" type="Button" parent="."]
+offset_left = 96.0
+offset_top = 556.0
+offset_right = 387.0
+offset_bottom = 650.0
 text = "Play Again"
 
-[connection signal="pressed" from="PlayAgainButton" to="PlayAgainButton" method="_on_pressed"]
+[node name="PiggyCoinCount" type="Sprite2D" parent="."]
+position = Vector2(413.387, 61.225)
+scale = Vector2(0.714617, 0.720181)
+texture = ExtResource("2_as6nk")
+
+[node name="Score" type="Label" parent="PiggyCoinCount"]
+offset_left = -30.5882
+offset_top = -25.8824
+offset_right = 44.4118
+offset_bottom = 35.1176
+text = "150"
+label_settings = SubResource("LabelSettings_adjc2")
+horizontal_alignment = 1
+
+[connection signal="pressed" from="PlayAgainButton" to="." method="_on_play_again_button_pressed"]

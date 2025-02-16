@@ -28,7 +28,7 @@ func _unhandled_input(event):
 		$Piggy.toggle_piggy_state(event.pressed)
 
 func _on_end_game_timer_timeout():
-	get_tree().reload_current_scene()
+	get_tree().change_scene_to_file("res://screens/gameover/game_over.tscn")
 
 func _on_right_coin_body_entered(body):
 	_on_any_coin_hit($Coins/RightCoin)
@@ -86,6 +86,7 @@ func _increase_speed():
 func _end_game():
 	print("Game over!")
 	speed = 0
+	GameData.last_score = score
 	$EndGameTimer.start()
 
 func _show_coin(coin: Node2D):
