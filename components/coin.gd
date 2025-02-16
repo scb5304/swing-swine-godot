@@ -3,7 +3,7 @@ extends Area2D
 var color = ""
 var tag = ""
 var coin_flip_color = randi() % 2
-var special_flip = randi() % 3 == 1
+var special_flip = randi() % 25 == 1
 
 func _ready():
 	randomize_color()

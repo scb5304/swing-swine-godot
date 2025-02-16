@@ -5,22 +5,14 @@ var speed = 0.9
 
 var touched = false
 
+var coins = []
+
 func doScore():
 	score += 1
 	increaseSpeed()
 	$Score.score(score)
+	print("Speed: " + str(speed), " score: " + str(score))
 	
-func onAnyCoinHit(coin):
-	print($Piggy.color + " piggy hit " + coin.color + " coin " + coin.tag)
-	if (coin.special_flip):
-		doScore()
-		$Piggy.scale.x *= -1
-	elif $Piggy.color != coin.color:
-		endGame()
-		return
-	else:
-		doScore()
-
 func isClockwise():
 	return $Piggy.scale.x > 0
 	
@@ -60,6 +52,12 @@ func _unhandled_input(event):
 			$Piggy.color = "Silver"
 			
 func _ready():
+	coins = [
+		$Coins/TopCoin,
+		$Coins/RightCoin,
+		$Coins/BottomCoin,
+		$Coins/LeftCoin
+	]
 	$Coins/RightCoin.visible = true	
 	$Coins/RightCoin.tag = "right"
 	$Coins/BottomCoin.visible = true
@@ -89,47 +87,34 @@ func hideCoin(coin):
 func _on_right_coin_body_entered(body):
 	onAnyCoinHit($Coins/RightCoin)
 
-	if $Coins/RightCoin.special_flip:
-		showCoin($Coins/RightCoin)
-	else:
-		hideCoin($Coins/RightCoin)
-		if isClockwise():
-			showCoin($Coins/TopCoin)
-		else:
-			showCoin($Coins/BottomCoin)
-
 func _on_bottom_coin_body_entered(body):
 	onAnyCoinHit($Coins/BottomCoin)
-
-	if $Coins/BottomCoin.special_flip:
-		showCoin($Coins/BottomCoin)
-	else:
-		hideCoin($Coins/BottomCoin)
-		if isClockwise():
-			showCoin($Coins/RightCoin)
-		else:
-			showCoin($Coins/LeftCoin)
 
 func _on_left_coin_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
 	onAnyCoinHit($Coins/LeftCoin)
 
-	if $Coins/LeftCoin.special_flip:
-		showCoin($Coins/LeftCoin)
-	else:
-		hideCoin($Coins/LeftCoin)
-		if isClockwise():
-			showCoin($Coins/BottomCoin)
-		else:
-			showCoin($Coins/TopCoin)
-
 func _on_top_coin_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
 	onAnyCoinHit($Coins/TopCoin)
 
-	if $Coins/TopCoin.special_flip:
-		showCoin($Coins/TopCoin)
+func onAnyCoinHit(coin):
+	print($Piggy.color + " piggy hit " + coin.color + " coin " + coin.tag)
+	if (coin.special_flip):
+		doScore()
+		showCoin(coin)
+		$Piggy.scale.x *= -1
+	elif $Piggy.color != coin.color:
+		endGame()
+		return
 	else:
-		hideCoin($Coins/TopCoin)
+		doScore()
+		hideCoin(coin)
+		var current_index = coins.find(coin)
+		var next_index = 0
 		if isClockwise():
-			showCoin($Coins/LeftCoin)
+			next_index = (current_index - 1 + coins.size()) % coins.size()
 		else:
-			showCoin($Coins/RightCoin)
+			next_index = (current_index + 1) % coins.size()
+		showCoin(coins[next_index])
+	
+		
+	
