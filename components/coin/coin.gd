@@ -6,8 +6,8 @@ const COIN_TYPE_FLIP = "FLIP"
 const COIN_COLOR_GOLD = "GOLD"
 const COIN_COLOR_SILVER = "SILVER"
 
-var type
-var color
+var type: String
+var color : String
 
 func _ready():
 	spawn()
@@ -29,5 +29,8 @@ func spawn():
 			$Sprite2D.texture = preload("res://assets/coin_silver.png")
 
 func _process(delta):
-	rotation += delta
+	var mult_factor: float = 2
+	if type == COIN_TYPE_FLIP:
+		mult_factor = 4.5
+	rotation += delta * mult_factor
 		

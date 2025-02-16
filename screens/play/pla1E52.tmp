@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://x4bnweudk8vs"]
+[gd_scene load_steps=7 format=3 uid="uid://x4bnweudk8vs"]
 
 [ext_resource type="Script" path="res://screens/play/play.gd" id="1_e80q3"]
 [ext_resource type="PackedScene" uid="uid://cbsuvkdplnnqe" path="res://components/background.tscn" id="1_osefx"]
 [ext_resource type="PackedScene" uid="uid://bvd76e6u4y8jo" path="res://components/coin/coin.tscn" id="4_3hwp3"]
 [ext_resource type="PackedScene" uid="uid://bf1r7j2wdhh0k" path="res://components/piggy/piggy.tscn" id="4_wqggr"]
-[ext_resource type="PackedScene" uid="uid://cmvf762ty44tn" path="res://components/score/score.tscn" id="5_enghu"]
+[ext_resource type="Script" path="res://screens/play/score.gd" id="6_xf7gm"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lrqgu"]
+font_size = 48
 
 [node name="PlayContainer" type="Node2D"]
 script = ExtResource("1_e80q3")
@@ -29,10 +32,22 @@ position = Vector2(250, 236)
 
 [node name="Piggy" parent="." instance=ExtResource("4_wqggr")]
 
-[node name="Score" parent="." instance=ExtResource("5_enghu")]
+[node name="Score" type="Label" parent="."]
+offset_left = 49.0
+offset_top = 31.0
+offset_right = 208.0
+offset_bottom = 98.0
+text = "0"
+label_settings = SubResource("LabelSettings_lrqgu")
+script = ExtResource("6_xf7gm")
+
+[node name="Timer" type="Timer" parent="Score"]
+wait_time = 0.059
+one_shot = true
 
 [connection signal="timeout" from="EndGameTimer" to="." method="_on_end_game_timer_timeout"]
 [connection signal="body_entered" from="Coins/RightCoin" to="." method="_on_right_coin_body_entered"]
 [connection signal="body_entered" from="Coins/BottomCoin" to="." method="_on_bottom_coin_body_entered"]
 [connection signal="body_entered" from="Coins/LeftCoin" to="." method="_on_left_coin_body_entered"]
 [connection signal="body_entered" from="Coins/TopCoin" to="." method="_on_top_coin_body_entered"]
+[connection signal="timeout" from="Score/Timer" to="Score" method="_on_score_timer_timeout"]

@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmvf762ty44tn"]
+
+[ext_resource type="Script" path="res://components/score/score.gd" id="1_fknq6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lrqgu"]
+font_size = 48
+
+[node name="Score" type="Label"]
+offset_left = 49.0
+offset_top = 31.0
+offset_right = 208.0
+offset_bottom = 98.0
+text = "0"
+label_settings = SubResource("LabelSettings_lrqgu")
+script = ExtResource("1_fknq6")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.059
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_score_timer_timeout"]

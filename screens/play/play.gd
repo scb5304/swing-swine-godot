@@ -1,6 +1,6 @@
 extends Node2D
 
-const Coin = preload("res://components/coin.gd")
+const Coin = preload("res://components/coin/coin.gd")
 
 var score: int = 0
 var speed: float = 0.9
