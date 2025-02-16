@@ -7,7 +7,6 @@
 radius = 17.72
 
 [node name="Coin" type="Area2D"]
-visible = false
 script = ExtResource("1_dlbmr")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
