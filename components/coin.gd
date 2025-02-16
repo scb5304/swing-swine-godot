@@ -1,6 +1,7 @@
 extends Area2D
 
 var color = ""
+var tag = ""
 
 func _ready():
 	randomize_color()
