@@ -1,14 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://x4bnweudk8vs"]
+[gd_scene load_steps=7 format=3 uid="uid://x4bnweudk8vs"]
 
 [ext_resource type="Script" path="res://screens/play/play.gd" id="1_e80q3"]
 [ext_resource type="PackedScene" uid="uid://cbsuvkdplnnqe" path="res://components/background.tscn" id="1_osefx"]
-[ext_resource type="Texture2D" uid="uid://d3p8w13n2bvdh" path="res://assets/piggy_silver_double.png" id="3_7i24t"]
-[ext_resource type="Script" path="res://screens/play/piggy.gd" id="3_wfwb7"]
 [ext_resource type="PackedScene" uid="uid://bvd76e6u4y8jo" path="res://components/coin.tscn" id="4_3hwp3"]
+[ext_resource type="PackedScene" uid="uid://bf1r7j2wdhh0k" path="res://components/piggy.tscn" id="4_wqggr"]
 [ext_resource type="Script" path="res://screens/play/score.gd" id="6_xf7gm"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_oj5t8"]
-size = Vector2(73, 111)
 
 [sub_resource type="LabelSettings" id="LabelSettings_lrqgu"]
 font_size = 48
@@ -34,18 +30,7 @@ position = Vector2(112, 363)
 [node name="TopCoin" parent="Coins" instance=ExtResource("4_3hwp3")]
 position = Vector2(250, 236)
 
-[node name="Piggy" type="CharacterBody2D" parent="."]
-position = Vector2(250, 371)
-script = ExtResource("3_wfwb7")
-
-[node name="Sprite2D" type="Sprite2D" parent="Piggy"]
-position = Vector2(0, -4.5)
-scale = Vector2(0.55, 0.55)
-texture = ExtResource("3_7i24t")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Piggy"]
-position = Vector2(-14.5, -137.5)
-shape = SubResource("RectangleShape2D_oj5t8")
+[node name="Piggy" parent="." instance=ExtResource("4_wqggr")]
 
 [node name="Score" type="Label" parent="."]
 offset_left = 49.0
