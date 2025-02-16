@@ -1,12 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://2gtmr6l7vjbf"]
+[gd_scene load_steps=6 format=3 uid="uid://2gtmr6l7vjbf"]
 
 [ext_resource type="PackedScene" uid="uid://cbsuvkdplnnqe" path="res://components/background.tscn" id="1_8tdqm"]
+[ext_resource type="Script" path="res://screens/menu/menu.gd" id="1_qt6qt"]
 [ext_resource type="PackedScene" uid="uid://dw22whed4wx1k" path="res://components/menu-button/menu_button.tscn" id="2_vhs73"]
 [ext_resource type="Texture2D" uid="uid://cjccdsx8s0fgv" path="res://assets/logo.png" id="3_7j48y"]
 [ext_resource type="Texture2D" uid="uid://dgqmrmi6ixsdp" path="res://assets/piggy_plain.png" id="4_232b5"]
 
 [node name="MenuContainer" type="Node2D"]
-metadata/_edit_lock_ = true
+script = ExtResource("1_qt6qt")
 
 [node name="TextureRect" parent="." instance=ExtResource("1_8tdqm")]
 
@@ -41,3 +42,5 @@ texture = ExtResource("3_7j48y")
 position = Vector2(50, 316)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("4_232b5")
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]

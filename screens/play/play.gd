@@ -4,6 +4,7 @@ const Coin = preload("res://components/coin/coin.gd")
 
 var score: int = 0
 var speed: float = 0.9
+var game_over: bool = false
 
 var coins: Array[Node2D] = []
 
@@ -25,7 +26,8 @@ func _process(delta: float):
 
 func _unhandled_input(event):
 	if event is InputEventScreenTouch or event is InputEventMouseButton:
-		$Piggy.toggle_piggy_state(event.pressed)
+		if !game_over:
+			$Piggy.toggle_piggy_state(event.pressed)
 
 func _on_end_game_timer_timeout():
 	get_tree().change_scene_to_file("res://screens/gameover/game_over.tscn")
@@ -85,6 +87,7 @@ func _increase_speed():
 
 func _end_game():
 	print("Game over!")
+	game_over = true
 	speed = 0
 	GameData.last_score = score
 	$EndGameTimer.start()
