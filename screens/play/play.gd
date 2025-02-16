@@ -1,56 +1,12 @@
 extends Node2D
 
-var score = 0
-var speed = 0.9
+const Coin = preload("res://components/coin.gd")
 
-var touched = false
+var score: int = 0
+var speed: float = 0.9
 
-var coins = []
+var coins: Array[Node2D] = []
 
-func doScore():
-	score += 1
-	increaseSpeed()
-	$Score.score(score)
-	print("Speed: " + str(speed), " score: " + str(score))
-	
-func isClockwise():
-	return $Piggy.scale.x > 0
-	
-func increaseSpeed():
-	if score < 10:
-		speed += 0.08
-	elif score < 25:
-		speed += 0.05
-	elif score < 50:
-		speed += 0.03
-	elif score < 100:
-		speed += 0.015
-	elif score < 150:
-		speed += 0.005
-	elif score < 300:
-		speed += 0.0025
-	else:
-		speed += 0.0001
-
-func endGame():
-	print("Game over!")
-	speed = 0
-	$EndGameTimer.start()
-
-func _on_end_game_timer_timeout():
-	get_tree().reload_current_scene()
-
-func _unhandled_input(event):
-	if event is InputEventScreenTouch || event is InputEventMouseButton:
-		if event.pressed:
-			touched = true
-			$Piggy/Sprite2D.texture = preload("res://assets/piggy_gold_double.png")
-			$Piggy.color = "Gold"
-		else:
-			touched = false
-			$Piggy/Sprite2D.texture = preload("res://assets/piggy_silver_double.png")
-			$Piggy.color = "Silver"
-			
 func _ready():
 	coins = [
 		$Coins/TopCoin,
@@ -58,63 +14,96 @@ func _ready():
 		$Coins/BottomCoin,
 		$Coins/LeftCoin
 	]
-	$Coins/RightCoin.visible = true	
-	$Coins/RightCoin.tag = "right"
-	$Coins/BottomCoin.visible = true
-	$Coins/BottomCoin.tag = "bottom"
-	$Coins/LeftCoin.visible = true
-	$Coins/LeftCoin.tag = "left"
-	$Coins/TopCoin.visible = false
-	$Coins/TopCoin.tag = "top"
-	$Coins/TopCoin/CollisionShape2D.set_deferred("disabled", true)
-	pass
 
-func _process(delta):
-	if isClockwise():
+	_initialize_coins()
+
+func _process(delta: float):
+	if $Piggy.is_clockwise():
 		$Piggy.rotation += speed * delta
 	else:
 		$Piggy.rotation -= speed * delta
 
-func showCoin(coin):
-	coin.visible = true
-	coin.get_node('CollisionShape2D').set_deferred("disabled", false)
-	coin.randomize_color()
+func _unhandled_input(event):
+	if event is InputEventScreenTouch or event is InputEventMouseButton:
+		$Piggy.toggle_piggy_state(event.pressed)
 
-func hideCoin(coin):
-	coin.visible = false
-	coin.get_node('CollisionShape2D').set_deferred("disabled", true)
+func _on_end_game_timer_timeout():
+	get_tree().reload_current_scene()
 
 func _on_right_coin_body_entered(body):
-	onAnyCoinHit($Coins/RightCoin)
+	_on_any_coin_hit($Coins/RightCoin)
 
 func _on_bottom_coin_body_entered(body):
-	onAnyCoinHit($Coins/BottomCoin)
+	_on_any_coin_hit($Coins/BottomCoin)
 
-func _on_left_coin_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
-	onAnyCoinHit($Coins/LeftCoin)
+func _on_left_coin_body_entered(body):
+	_on_any_coin_hit($Coins/LeftCoin)
 
-func _on_top_coin_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
-	onAnyCoinHit($Coins/TopCoin)
+func _on_top_coin_body_entered(body):
+	_on_any_coin_hit($Coins/TopCoin)
 
-func onAnyCoinHit(coin):
-	print($Piggy.color + " piggy hit " + coin.color + " coin " + coin.tag)
-	if (coin.special_flip):
-		doScore()
-		showCoin(coin)
+func _initialize_coins():
+	for coin in coins:
+		coin.visible = true
+		coin.get_node("CollisionShape2D").set_deferred("disabled", false)
+
+	$Coins/TopCoin.visible = false
+	$Coins/TopCoin.get_node("CollisionShape2D").set_deferred("disabled", true)
+
+func _on_any_coin_hit(hit_coin: Node2D):
+	if hit_coin.type == Coin.COIN_TYPE_FLIP:
+		_do_score()
+		_show_coin(hit_coin)
 		$Piggy.scale.x *= -1
-	elif $Piggy.color != coin.color:
-		endGame()
 		return
+	
+	if $Piggy.color != hit_coin.color:
+		_end_game()
+		return
+	
+	_do_score()
+	_hide_coin(hit_coin)
+	
+	var next_coin: Node2D = _get_next_coin(hit_coin)
+	_show_coin(next_coin)
+
+func _do_score():
+	score += 1
+	_increase_speed()
+	$Score.score(score)
+	print("Speed: " + str(speed), " Score: " + str(score))
+
+func _increase_speed():
+	var max_speed: float = 5.5
+	var base_speed_increase: float = 0.11
+	var decay_factor: float = 0.05
+
+	var speed_before: float = speed
+	speed += base_speed_increase / (1 + decay_factor * score)
+	speed = min(speed, max_speed)
+	print("Speed increased by " + str(speed - speed_before))
+
+func _end_game():
+	print("Game over!")
+	speed = 0
+	$EndGameTimer.start()
+
+func _show_coin(coin: Node2D):
+	coin.visible = true
+	coin.get_node("CollisionShape2D").set_deferred("disabled", false)
+	coin.spawn()
+
+func _hide_coin(coin: Node2D):
+	coin.visible = false
+	coin.get_node("CollisionShape2D").set_deferred("disabled", true)
+	
+func _get_next_coin(hit_coin: Node2D) -> Node2D:
+	var current_index: int = coins.find(hit_coin)
+	var next_index: int = 0
+
+	if $Piggy.is_clockwise():
+		next_index = (current_index - 1 + coins.size()) % coins.size()
 	else:
-		doScore()
-		hideCoin(coin)
-		var current_index = coins.find(coin)
-		var next_index = 0
-		if isClockwise():
-			next_index = (current_index - 1 + coins.size()) % coins.size()
-		else:
-			next_index = (current_index + 1) % coins.size()
-		showCoin(coins[next_index])
-	
-		
-	
+		next_index = (current_index + 1) % coins.size()
+
+	return coins[next_index]

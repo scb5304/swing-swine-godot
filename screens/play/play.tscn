@@ -63,6 +63,6 @@ one_shot = true
 [connection signal="timeout" from="EndGameTimer" to="." method="_on_end_game_timer_timeout"]
 [connection signal="body_entered" from="Coins/RightCoin" to="." method="_on_right_coin_body_entered"]
 [connection signal="body_entered" from="Coins/BottomCoin" to="." method="_on_bottom_coin_body_entered"]
-[connection signal="body_shape_entered" from="Coins/LeftCoin" to="." method="_on_left_coin_body_shape_entered"]
-[connection signal="body_shape_entered" from="Coins/TopCoin" to="." method="_on_top_coin_body_shape_entered"]
+[connection signal="body_entered" from="Coins/LeftCoin" to="." method="_on_left_coin_body_entered"]
+[connection signal="body_entered" from="Coins/TopCoin" to="." method="_on_top_coin_body_entered"]
 [connection signal="timeout" from="Score/Timer" to="Score" method="_on_score_timer_timeout"]
