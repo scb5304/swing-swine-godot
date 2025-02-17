@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://h2uyoy5ibchv"]
+[gd_scene load_steps=9 format=3 uid="uid://h2uyoy5ibchv"]
 
 [ext_resource type="Texture2D" uid="uid://dw84oyssktx57" path="res://assets/backdrop_sky.jpg" id="1_5lk0a"]
 [ext_resource type="Script" path="res://screens/gameover/game_over.gd" id="1_20b8p"]
 [ext_resource type="Texture2D" uid="uid://bxoys2ixkxswq" path="res://assets/piggy_coin_count.png" id="2_as6nk"]
 [ext_resource type="Texture2D" uid="uid://cr82ku73s2tq4" path="res://assets/coin_arrow.png" id="3_gkl3a"]
+[ext_resource type="AudioStream" uid="uid://bphbn0dy130mj" path="res://assets/sounds/high_score.mp3" id="5_a3xye"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_adjc2"]
 font_size = 44
@@ -57,7 +58,7 @@ offset_left = 2.0
 offset_top = 295.0
 offset_right = 478.0
 offset_bottom = 538.0
-text = "You got 69 coins!"
+text = "You got coins!"
 label_settings = SubResource("LabelSettings_5imc5")
 horizontal_alignment = 1
 autowrap_mode = 3
@@ -76,6 +77,9 @@ offset_top = 619.0
 offset_right = 352.0
 offset_bottom = 675.0
 text = "Main Menu"
+
+[node name="HighScoreSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_a3xye")
 
 [connection signal="pressed" from="PlayAgainButton" to="." method="_on_play_again_button_pressed"]
 [connection signal="pressed" from="MainMenuButton" to="." method="_on_main_menu_button_pressed"]
