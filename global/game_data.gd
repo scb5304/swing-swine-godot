@@ -22,7 +22,6 @@ func save_game():
 	var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
 	file.store_string(JSON.stringify(data))
 	file.close()
-	pass
 
 func load_game() -> bool:
 	if not FileAccess.file_exists(SAVE_PATH):
@@ -45,3 +44,8 @@ func load_game() -> bool:
 	last_score = data.get("last_score", 0)
 	money_total = data.get("money_total", 0)
 	return true
+
+func clear_data():
+	var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
+	file.store_string("")
+	file.close()
