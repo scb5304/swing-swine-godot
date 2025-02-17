@@ -13,6 +13,8 @@ script = ExtResource("1_e80q3")
 
 [node name="Background" parent="." instance=ExtResource("1_osefx")]
 
+[node name="Sounds" type="Node" parent="."]
+
 [node name="Coins" type="Node" parent="."]
 
 [node name="RightCoin" parent="Coins" instance=ExtResource("4_3hwp3")]

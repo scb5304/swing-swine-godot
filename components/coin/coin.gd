@@ -19,6 +19,7 @@ func spawn():
 	if (randi() % 12 == 1):
 		type = COIN_TYPE_FLIP
 		$Sprite2D.texture = preload("res://assets/coin_arrow.png")
+		$CoinArrowSpawnSound.play()
 	else:
 		type = COIN_TYPE_STANDARD
 		if (randi() % 2 == 1):
@@ -34,3 +35,8 @@ func _process(delta):
 		mult_factor = 4.5
 	rotation += delta * mult_factor
 		
+func collect():
+	$CoinCollectSound.play()
+
+func clash():
+	$CoinClashSound.play()

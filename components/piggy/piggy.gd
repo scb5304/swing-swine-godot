@@ -12,3 +12,7 @@ func toggle_piggy_state(is_pressed):
 
 func is_clockwise():
 	return scale.x > 0
+
+func flip():
+	scale.x *= -1
+	$PiggyFlipSound.play()

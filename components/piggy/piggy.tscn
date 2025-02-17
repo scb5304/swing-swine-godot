@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bf1r7j2wdhh0k"]
+[gd_scene load_steps=5 format=3 uid="uid://bf1r7j2wdhh0k"]
 
 [ext_resource type="Script" path="res://components/piggy/piggy.gd" id="1_o4urt"]
 [ext_resource type="Texture2D" uid="uid://d3p8w13n2bvdh" path="res://assets/piggy_silver_double.png" id="2_n7l27"]
+[ext_resource type="AudioStream" uid="uid://chtjs54f57w21" path="res://assets/sounds/piggy_flip.mp3" id="3_xvfmu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oj5t8"]
 size = Vector2(73, 111)
@@ -18,3 +19,6 @@ texture = ExtResource("2_n7l27")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-14.5, -137.5)
 shape = SubResource("RectangleShape2D_oj5t8")
+
+[node name="PiggyFlipSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_xvfmu")

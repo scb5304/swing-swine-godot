@@ -29,9 +29,6 @@ func _unhandled_input(event):
 		if !game_over:
 			$Piggy.toggle_piggy_state(event.pressed)
 
-func _on_end_game_timer_timeout():
-	get_tree().change_scene_to_file("res://screens/gameover/game_over.tscn")
-
 func _on_right_coin_body_entered(body):
 	_on_any_coin_hit($Coins/RightCoin)
 
@@ -54,20 +51,20 @@ func _initialize_coins():
 
 func _on_any_coin_hit(hit_coin: Node2D):
 	if hit_coin.type == Coin.COIN_TYPE_FLIP:
+		hit_coin.collect()
 		_do_score()
 		_show_coin(hit_coin)
-		$Piggy.scale.x *= -1
-		return
-	
-	if $Piggy.color != hit_coin.color:
+		$Piggy.flip()
+	elif $Piggy.color != hit_coin.color:
+		hit_coin.clash()
 		_end_game()
-		return
-	
-	_do_score()
-	_hide_coin(hit_coin)
-	
-	var next_coin: Node2D = _get_next_coin(hit_coin)
-	_show_coin(next_coin)
+	else:
+		hit_coin.collect()
+		_do_score()
+		_hide_coin(hit_coin)
+		
+		var next_coin: Node2D = _get_next_coin(hit_coin)
+		_show_coin(next_coin)
 
 func _do_score():
 	score += 1
@@ -84,13 +81,6 @@ func _increase_speed():
 	speed += base_speed_increase / (1 + decay_factor * score)
 	speed = min(speed, max_speed)
 	print("Speed increased by " + str(speed - speed_before))
-
-func _end_game():
-	print("Game over!")
-	game_over = true
-	speed = 0
-	GameData.last_score = score
-	$EndGameTimer.start()
 
 func _show_coin(coin: Node2D):
 	coin.visible = true
@@ -111,3 +101,13 @@ func _get_next_coin(hit_coin: Node2D) -> Node2D:
 		next_index = (current_index + 1) % coins.size()
 
 	return coins[next_index]
+
+func _end_game():
+	game_over = true
+	speed = 0
+	GameData.last_score = score
+
+	$EndGameTimer.start()
+
+func _on_end_game_timer_timeout():
+	get_tree().change_scene_to_file("res://screens/gameover/game_over.tscn")
