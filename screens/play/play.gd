@@ -106,6 +106,7 @@ func _end_game():
 	game_over = true
 	speed = 0
 	GameData.last_score = score
+	GameData.money_total += score
 
 	$EndGameTimer.start()
 

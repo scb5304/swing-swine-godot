@@ -2,6 +2,9 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	var moneyStr = str(GameData.money_total)
+	$PiggyCoinCount/CoinCountText.text = moneyStr
+
 	var scoreStr = str(GameData.last_score)
 	if (GameData.last_score < 1):
 		$NiceText.text = "uh oh..."

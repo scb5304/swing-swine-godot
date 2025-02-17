@@ -34,7 +34,7 @@ position = Vector2(413.387, 61.225)
 scale = Vector2(0.714617, 0.720181)
 texture = ExtResource("2_as6nk")
 
-[node name="Score" type="Label" parent="PiggyCoinCount"]
+[node name="CoinCountText" type="Label" parent="PiggyCoinCount"]
 offset_left = -30.5882
 offset_top = -25.8824
 offset_right = 44.4118
