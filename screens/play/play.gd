@@ -50,26 +50,26 @@ func _initialize_coins():
 	$Coins/TopCoin.get_node("CollisionShape2D").set_deferred("disabled", true)
 
 func _on_any_coin_hit(hit_coin: Node2D):
-	if hit_coin.type == Coin.COIN_TYPE_FLIP:
-		hit_coin.collect()
-		_do_score()
-		_show_coin(hit_coin)
-		$Piggy.flip()
-	elif $Piggy.color != hit_coin.color:
+	if hit_coin.type == Coin.COIN_TYPE_STANDARD and $Piggy.color != hit_coin.color:
 		hit_coin.clash()
 		_end_game()
-	else:
-		hit_coin.collect()
-		_do_score()
-		_hide_coin(hit_coin)
-		
-		var next_coin: Node2D = _get_next_coin(hit_coin)
-		_show_coin(next_coin)
+		return
+	
+	hit_coin.collect()
+	_on_coin_collected()
 
-func _do_score():
+	if hit_coin.type == Coin.COIN_TYPE_FLIP:
+		_show_coin(hit_coin)
+		$Piggy.flip()
+	else:
+		_show_coin(_get_next_coin(hit_coin))
+		_hide_coin(hit_coin)
+
+func _on_coin_collected():
 	score += 1
-	_increase_speed()
 	$Score.score(score)
+	_increase_speed()
+	
 	print("Speed: " + str(speed), " Score: " + str(score))
 
 func _increase_speed():
