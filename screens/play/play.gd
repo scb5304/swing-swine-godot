@@ -62,7 +62,7 @@ func _on_any_coin_hit(hit_coin: Node2D):
 		return
 	
 	hit_coin.collect()
-	_on_coin_collected()
+	_on_coin_collected(hit_coin)
 
 	if hit_coin.type == Coin.COIN_TYPE_FLIP:
 		_show_coin(hit_coin)
@@ -71,9 +71,12 @@ func _on_any_coin_hit(hit_coin: Node2D):
 		_show_coin(_get_next_coin(hit_coin))
 		_hide_coin(hit_coin)
 
-func _on_coin_collected():
-	score += 1
-	$Score.score(score)
+func _on_coin_collected(hit_coin):
+	if (hit_coin.mod == Coin.COIN_MOD_ULTRA):
+		score += 3
+	else:
+		score += 1
+	$Score.score(hit_coin, score)
 	_increase_speed()
 	_increase_pitch()
 	

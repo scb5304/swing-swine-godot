@@ -15,7 +15,7 @@ label_settings = SubResource("LabelSettings_lrqgu")
 script = ExtResource("1_fknq6")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.059
+wait_time = 0.024
 one_shot = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_score_timer_timeout"]
