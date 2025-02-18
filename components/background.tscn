@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cbsuvkdplnnqe"]
 
-[ext_resource type="Texture2D" uid="uid://dw84oyssktx57" path="res://assets/backdrop_sky.jpg" id="1_o8dne"]
+[ext_resource type="Texture2D" uid="uid://dw84oyssktx57" path="res://assets/images/brand/backdrop_sky.jpg" id="1_o8dne"]
 
 [node name="Background" type="TextureRect"]
 offset_right = 481.0

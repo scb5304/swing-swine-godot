@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://dw22whed4wx1k"]
 
-[ext_resource type="Texture2D" uid="uid://ppxo76i7h8yc" path="res://assets/black.png" id="1_2ms8c"]
+[ext_resource type="Texture2D" uid="uid://ppxo76i7h8yc" path="res://assets/images/brand/black.png" id="1_2ms8c"]
 [ext_resource type="Script" path="res://components/menu-button/menu_button.gd" id="2_b3pe8"]
-[ext_resource type="Texture2D" uid="uid://cjodnq5kupikp" path="res://assets/gray.png" id="2_cb6da"]
+[ext_resource type="Texture2D" uid="uid://cjodnq5kupikp" path="res://assets/images/brand/gray.png" id="2_cb6da"]
 
 [node name="MenuButton" type="TextureButton"]
 self_modulate = Color(1, 1, 1, 0.301961)

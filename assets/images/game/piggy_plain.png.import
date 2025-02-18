@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ppxo76i7h8yc"
-path="res://.godot/imported/black.png-0c928088330c4cddf9e28b960b6ccae3.ctex"
+uid="uid://dgqmrmi6ixsdp"
+path="res://.godot/imported/piggy_plain.png-db12ee935b30e9f4bb6952ed339a0287.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/black.png"
-dest_files=["res://.godot/imported/black.png-0c928088330c4cddf9e28b960b6ccae3.ctex"]
+source_file="res://assets/images/game/piggy_plain.png"
+dest_files=["res://.godot/imported/piggy_plain.png-db12ee935b30e9f4bb6952ed339a0287.ctex"]
 
 [params]
 

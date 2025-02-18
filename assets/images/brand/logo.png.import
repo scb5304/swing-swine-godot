@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3p8w13n2bvdh"
-path="res://.godot/imported/piggy_silver_double.png-6c9af8554400bc2fcf5da7bcbd21aeba.ctex"
+uid="uid://cjccdsx8s0fgv"
+path="res://.godot/imported/logo.png-8fbbfdc5e58f9e17dcb79182c049763e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/piggy_silver_double.png"
-dest_files=["res://.godot/imported/piggy_silver_double.png-6c9af8554400bc2fcf5da7bcbd21aeba.ctex"]
+source_file="res://assets/images/brand/logo.png"
+dest_files=["res://.godot/imported/logo.png-8fbbfdc5e58f9e17dcb79182c049763e.ctex"]
 
 [params]
 

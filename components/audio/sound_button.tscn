@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://mp5khaij8tqc"]
 
-[ext_resource type="Texture2D" uid="uid://ctsmkae2rq63p" path="res://assets/volume-high-custom.png" id="1_3fo0k"]
+[ext_resource type="Texture2D" uid="uid://ctsmkae2rq63p" path="res://assets/images/icons/volume-high-custom.png" id="1_3fo0k"]
 [ext_resource type="Script" path="res://components/audio/sound_button.gd" id="2_xer6y"]
 
 [node name="SoundButton" type="Button"]

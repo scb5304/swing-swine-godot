@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://bvd76e6u4y8jo"]
 
-[ext_resource type="Texture2D" uid="uid://ed5lg8crqlew" path="res://assets/coin_gold.png" id="1_4ual3"]
+[ext_resource type="Texture2D" uid="uid://ed5lg8crqlew" path="res://assets/images/game/coin_gold.png" id="1_4ual3"]
 [ext_resource type="Script" path="res://components/coin/coin.gd" id="1_dlbmr"]
 [ext_resource type="AudioStream" uid="uid://gy7taffuq6xh" path="res://assets/sounds/coin_collect.mp3" id="3_6vkjg"]
 [ext_resource type="AudioStream" uid="uid://bu03rpmys0n4b" path="res://assets/sounds/coin_clash.mp3" id="4_qbjdh"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dr0rvl2yryoun"
-path="res://.godot/imported/shades.png-bf6db1d4f0acab3aa0d02605468e6362.ctex"
+uid="uid://d3p8w13n2bvdh"
+path="res://.godot/imported/piggy_silver_double.png-3281d3c08e5ac9e9bad76cd32cc41f81.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/shades.png"
-dest_files=["res://.godot/imported/shades.png-bf6db1d4f0acab3aa0d02605468e6362.ctex"]
+source_file="res://assets/images/game/piggy_silver_double.png"
+dest_files=["res://.godot/imported/piggy_silver_double.png-3281d3c08e5ac9e9bad76cd32cc41f81.ctex"]
 
 [params]
 

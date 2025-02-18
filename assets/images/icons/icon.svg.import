@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dw84oyssktx57"
-path="res://.godot/imported/backdrop_sky.jpg-652d778314cab3522f0328e82988a078.ctex"
+uid="uid://cdceit128dnlq"
+path="res://.godot/imported/icon.svg-99474a4dfd6901b288e262a08bb6ef8f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/backdrop_sky.jpg"
-dest_files=["res://.godot/imported/backdrop_sky.jpg-652d778314cab3522f0328e82988a078.ctex"]
+source_file="res://assets/images/icons/icon.svg"
+dest_files=["res://.godot/imported/icon.svg-99474a4dfd6901b288e262a08bb6ef8f.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

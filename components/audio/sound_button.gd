@@ -10,6 +10,6 @@ func _on_sound_button_pressed():
 
 func _init_icon():
 	if (GameData.setting_sound_effects_enabled):
-		icon = preload("res://assets/volume-high-custom.png")
+		icon = preload("res://assets/images/icons/volume-high-custom.png")
 	else:
-		icon = preload("res://assets/volume-off-custom.png")
+		icon = preload("res://assets/images/icons/volume-off-custom.png")

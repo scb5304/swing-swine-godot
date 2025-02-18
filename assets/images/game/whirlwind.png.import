@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgqmrmi6ixsdp"
-path="res://.godot/imported/piggy_plain.png-6e24fdf0148a92e16b7f7f0c86cb5a26.ctex"
+uid="uid://rltdg5ldgqmm"
+path="res://.godot/imported/whirlwind.png-fac889c93c40e496f5a71882a4718aae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/piggy_plain.png"
-dest_files=["res://.godot/imported/piggy_plain.png-6e24fdf0148a92e16b7f7f0c86cb5a26.ctex"]
+source_file="res://assets/images/game/whirlwind.png"
+dest_files=["res://.godot/imported/whirlwind.png-fac889c93c40e496f5a71882a4718aae.ctex"]
 
 [params]
 

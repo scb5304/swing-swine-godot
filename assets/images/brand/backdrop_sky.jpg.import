@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bi7itu55la56j"
-path="res://.godot/imported/jesterHat.png-e4d3be828a5ac30ab6a188f31d016b84.ctex"
+uid="uid://dw84oyssktx57"
+path="res://.godot/imported/backdrop_sky.jpg-3868533ca05899be33461b72dcee4ca9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/jesterHat.png"
-dest_files=["res://.godot/imported/jesterHat.png-e4d3be828a5ac30ab6a188f31d016b84.ctex"]
+source_file="res://assets/images/brand/backdrop_sky.jpg"
+dest_files=["res://.godot/imported/backdrop_sky.jpg-3868533ca05899be33461b72dcee4ca9.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnvmdfhovggem"
-path="res://.godot/imported/piggy_gold_double.png-87231320f4cf61e4a9731631e53473d1.ctex"
+uid="uid://6k8lrrp80kfd"
+path="res://.godot/imported/music-off-custom.png-84e3d5af1c912b8e918a3232c367ff34.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/piggy_gold_double.png"
-dest_files=["res://.godot/imported/piggy_gold_double.png-87231320f4cf61e4a9731631e53473d1.ctex"]
+source_file="res://assets/images/icons/music-off-custom.png"
+dest_files=["res://.godot/imported/music-off-custom.png-84e3d5af1c912b8e918a3232c367ff34.ctex"]
 
 [params]
 

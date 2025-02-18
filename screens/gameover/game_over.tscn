@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=3 uid="uid://h2uyoy5ibchv"]
 
-[ext_resource type="Texture2D" uid="uid://dw84oyssktx57" path="res://assets/backdrop_sky.jpg" id="1_5lk0a"]
+[ext_resource type="Texture2D" uid="uid://dw84oyssktx57" path="res://assets/images/brand/backdrop_sky.jpg" id="1_5lk0a"]
 [ext_resource type="Script" path="res://screens/gameover/game_over.gd" id="1_20b8p"]
-[ext_resource type="Texture2D" uid="uid://bxoys2ixkxswq" path="res://assets/piggy_coin_count.png" id="2_as6nk"]
-[ext_resource type="Texture2D" uid="uid://cr82ku73s2tq4" path="res://assets/coin_arrow.png" id="3_gkl3a"]
+[ext_resource type="Texture2D" uid="uid://bxoys2ixkxswq" path="res://assets/images/game/piggy_coin_count.png" id="2_as6nk"]
+[ext_resource type="Texture2D" uid="uid://cr82ku73s2tq4" path="res://assets/images/game/coin_arrow.png" id="3_gkl3a"]
 [ext_resource type="AudioStream" uid="uid://bphbn0dy130mj" path="res://assets/sounds/high_score.mp3" id="5_a3xye"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_adjc2"]

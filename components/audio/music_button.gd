@@ -10,6 +10,6 @@ func _on_music_button_pressed():
 
 func _init_icon():
 	if (GameData.setting_music_enabled):
-		icon = preload("res://assets/music-custom.png")
+		icon = preload("res://assets/images/icons/music-custom.png")
 	else:
-		icon = preload("res://assets/music-off-custom.png")
+		icon = preload("res://assets/images/icons/music-off-custom.png")

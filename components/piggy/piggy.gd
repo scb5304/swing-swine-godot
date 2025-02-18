@@ -4,10 +4,10 @@ var color = "Silver"
 
 func toggle_piggy_state(is_pressed):
 	if is_pressed:
-		$Sprite2D.texture = preload("res://assets/piggy_gold_double.png")
+		$Sprite2D.texture = preload("res://assets/images/game/piggy_gold_double.png")
 		color = "Gold"
 	else:
-		$Sprite2D.texture = preload("res://assets/piggy_silver_double.png")
+		$Sprite2D.texture = preload("res://assets/images/game/piggy_silver_double.png")
 		color = "Silver"
 
 func is_clockwise():

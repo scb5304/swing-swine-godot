@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://myifig8ek1g5"
-path="res://.godot/imported/coin_silver.png-4bed0e95e1ad6243725f70b51c7f8261.ctex"
+uid="uid://bi7itu55la56j"
+path="res://.godot/imported/jesterHat.png-ab049c94797306bd26823572a761c75a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/coin_silver.png"
-dest_files=["res://.godot/imported/coin_silver.png-4bed0e95e1ad6243725f70b51c7f8261.ctex"]
+source_file="res://assets/images/accessories/jesterHat.png"
+dest_files=["res://.godot/imported/jesterHat.png-ab049c94797306bd26823572a761c75a.ctex"]
 
 [params]
 

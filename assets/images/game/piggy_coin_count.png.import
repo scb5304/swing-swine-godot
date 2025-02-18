@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhabuoflby6ib"
-path="res://.godot/imported/piggy_gold.png-86ed83c739a11ecd38202458304a0564.ctex"
+uid="uid://bxoys2ixkxswq"
+path="res://.godot/imported/piggy_coin_count.png-8dbef25153086fc44ae810efc599162b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/piggy_gold.png"
-dest_files=["res://.godot/imported/piggy_gold.png-86ed83c739a11ecd38202458304a0564.ctex"]
+source_file="res://assets/images/game/piggy_coin_count.png"
+dest_files=["res://.godot/imported/piggy_coin_count.png-8dbef25153086fc44ae810efc599162b.ctex"]
 
 [params]
 

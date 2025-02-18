@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://blg8r2fhgmpvk"]
 
 [ext_resource type="Script" path="res://screens/settings/settings.gd" id="1_erh5t"]
-[ext_resource type="Texture2D" uid="uid://dw84oyssktx57" path="res://assets/backdrop_sky.jpg" id="2_ydmuq"]
+[ext_resource type="Texture2D" uid="uid://dw84oyssktx57" path="res://assets/images/brand/backdrop_sky.jpg" id="2_ydmuq"]
 [ext_resource type="PackedScene" uid="uid://mp5khaij8tqc" path="res://components/audio/sound_button.tscn" id="3_ul6sq"]
 [ext_resource type="PackedScene" uid="uid://bc4sgbj5vetsv" path="res://components/audio/music_button.tscn" id="4_nwecf"]
 

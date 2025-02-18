@@ -18,16 +18,16 @@ func spawn():
 	
 	if (randi() % 12 == 1):
 		type = COIN_TYPE_FLIP
-		$Sprite2D.texture = preload("res://assets/coin_arrow.png")
+		$Sprite2D.texture = preload("res://assets/images/game/coin_arrow.png")
 		$CoinArrowSpawnSound.play()
 	else:
 		type = COIN_TYPE_STANDARD
 		if (randi() % 2 == 1):
 			color = "Gold"
-			$Sprite2D.texture = preload("res://assets/coin_gold.png")
+			$Sprite2D.texture = preload("res://assets/images/game/coin_gold.png")
 		else:
 			color = "Silver"
-			$Sprite2D.texture = preload("res://assets/coin_silver.png")
+			$Sprite2D.texture = preload("res://assets/images/game/coin_silver.png")
 
 func _process(delta):
 	var mult_factor: float = 2
