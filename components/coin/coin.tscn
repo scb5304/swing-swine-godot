@@ -21,9 +21,12 @@ shape = SubResource("CircleShape2D_nnu0v")
 
 [node name="CoinCollectSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_6vkjg")
+bus = &"SFX"
 
 [node name="CoinClashSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_qbjdh")
+bus = &"SFX"
 
 [node name="CoinArrowSpawnSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_cpoij")
+bus = &"SFX"

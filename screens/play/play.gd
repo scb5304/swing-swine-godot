@@ -1,9 +1,13 @@
 extends Node2D
 
 const Coin = preload("res://components/coin/coin.gd")
+const DEBUG_DISABLE_COIN_CLASH: bool = false
 
 var score: int = 0
 var speed: float = 0.9
+
+var music_pitch_scale = 1.0
+
 var game_over: bool = false
 
 var coins: Array[Node2D] = []
@@ -50,7 +54,9 @@ func _initialize_coins():
 	$Coins/TopCoin.get_node("CollisionShape2D").set_deferred("disabled", true)
 
 func _on_any_coin_hit(hit_coin: Node2D):
-	if hit_coin.type == Coin.COIN_TYPE_STANDARD and $Piggy.color != hit_coin.color:
+	if (hit_coin.type == Coin.COIN_TYPE_STANDARD 
+		and $Piggy.color != hit_coin.color 
+		and !DEBUG_DISABLE_COIN_CLASH):
 		hit_coin.clash()
 		_end_game()
 		return
@@ -69,8 +75,11 @@ func _on_coin_collected():
 	score += 1
 	$Score.score(score)
 	_increase_speed()
+	_increase_pitch()
 	
 	print("Speed: " + str(speed), " Score: " + str(score))
+	if (score == 1):
+		$Sounds/Music1.play()
 
 func _increase_speed():
 	var max_speed: float = 5.5
@@ -81,6 +90,12 @@ func _increase_speed():
 	speed += base_speed_increase / (1 + decay_factor * score)
 	speed = min(speed, max_speed)
 	print("Speed increased by " + str(speed - speed_before))
+
+func _increase_pitch():
+	if (music_pitch_scale < 1.25):
+		music_pitch_scale += 0.0005
+	print("music_pitch_scale: " + str(music_pitch_scale))
+	$Sounds/Music1.pitch_scale = music_pitch_scale
 
 func _show_coin(coin: Node2D):
 	coin.visible = true
@@ -110,3 +125,6 @@ func _end_game():
 
 func _on_end_game_timer_timeout():
 	get_tree().change_scene_to_file("res://screens/gameover/game_over.tscn")
+
+func _on_music_1_finished():
+	$Sounds/Music1.play()

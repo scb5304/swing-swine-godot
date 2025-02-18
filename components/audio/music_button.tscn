@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bc4sgbj5vetsv"]
+
+[ext_resource type="Texture2D" uid="uid://cglbe01fu5qjf" path="res://assets/music-custom.png" id="1_q2hgx"]
+[ext_resource type="Script" path="res://components/audio/music_button.gd" id="2_lk7c6"]
+
+[node name="MusicButton" type="Button"]
+offset_right = 62.0
+offset_bottom = 47.0
+icon = ExtResource("1_q2hgx")
+icon_alignment = 1
+script = ExtResource("2_lk7c6")
+
+[connection signal="pressed" from="." to="." method="_on_music_button_pressed"]

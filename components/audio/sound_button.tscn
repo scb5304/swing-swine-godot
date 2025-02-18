@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://mp5khaij8tqc"]
+
+[ext_resource type="Texture2D" uid="uid://ctsmkae2rq63p" path="res://assets/volume-high-custom.png" id="1_3fo0k"]
+[ext_resource type="Script" path="res://components/audio/sound_button.gd" id="2_xer6y"]
+
+[node name="SoundButton" type="Button"]
+offset_right = 62.0
+offset_bottom = 46.0
+icon = ExtResource("1_3fo0k")
+icon_alignment = 1
+script = ExtResource("2_xer6y")
+
+[connection signal="pressed" from="." to="." method="_on_sound_button_pressed"]
