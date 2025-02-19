@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://carcmrgxbwlrp"
-path="res://.godot/imported/bow.png-5c9dbfd1f7d5965f97ffdd405666703f.ctex"
+uid="uid://dqwdl3wm11w7t"
+path="res://.godot/imported/birthdayHat.png-95740720ddb42e99095e2cccd758b180.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/accessories/bow.png"
-dest_files=["res://.godot/imported/bow.png-5c9dbfd1f7d5965f97ffdd405666703f.ctex"]
+source_file="res://assets/images/accessories/birthdayHat.png"
+dest_files=["res://.godot/imported/birthdayHat.png-95740720ddb42e99095e2cccd758b180.ctex"]
 
 [params]
 

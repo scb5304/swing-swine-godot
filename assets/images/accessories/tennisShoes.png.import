@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://carcmrgxbwlrp"
-path="res://.godot/imported/bow.png-5c9dbfd1f7d5965f97ffdd405666703f.ctex"
+uid="uid://c54cf1ycnsemw"
+path="res://.godot/imported/tennisShoes.png-107bfb124de74dce914fbafc50ea0c13.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/accessories/bow.png"
-dest_files=["res://.godot/imported/bow.png-5c9dbfd1f7d5965f97ffdd405666703f.ctex"]
+source_file="res://assets/images/accessories/tennisShoes.png"
+dest_files=["res://.godot/imported/tennisShoes.png-107bfb124de74dce914fbafc50ea0c13.ctex"]
 
 [params]
 

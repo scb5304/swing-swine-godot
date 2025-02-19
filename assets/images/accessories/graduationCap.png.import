@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://carcmrgxbwlrp"
-path="res://.godot/imported/bow.png-5c9dbfd1f7d5965f97ffdd405666703f.ctex"
+uid="uid://w0y1letigh1t"
+path="res://.godot/imported/graduationCap.png-694bc5501276f771e302a38330c6208c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/accessories/bow.png"
-dest_files=["res://.godot/imported/bow.png-5c9dbfd1f7d5965f97ffdd405666703f.ctex"]
+source_file="res://assets/images/accessories/graduationCap.png"
+dest_files=["res://.godot/imported/graduationCap.png-694bc5501276f771e302a38330c6208c.ctex"]
 
 [params]
 

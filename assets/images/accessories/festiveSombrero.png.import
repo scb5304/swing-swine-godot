@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://carcmrgxbwlrp"
-path="res://.godot/imported/bow.png-5c9dbfd1f7d5965f97ffdd405666703f.ctex"
+uid="uid://dc6tfkuu2w6kp"
+path="res://.godot/imported/festiveSombrero.png-527bbef1f4b07528529695d29bf7a575.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/accessories/bow.png"
-dest_files=["res://.godot/imported/bow.png-5c9dbfd1f7d5965f97ffdd405666703f.ctex"]
+source_file="res://assets/images/accessories/festiveSombrero.png"
+dest_files=["res://.godot/imported/festiveSombrero.png-527bbef1f4b07528529695d29bf7a575.ctex"]
 
 [params]
 

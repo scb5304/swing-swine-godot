@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://carcmrgxbwlrp"
-path="res://.godot/imported/bow.png-5c9dbfd1f7d5965f97ffdd405666703f.ctex"
+uid="uid://bk1qwwsyh4vd3"
+path="res://.godot/imported/detectiveHat.png-d8d3564391d05fc943a331cb170f5073.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/accessories/bow.png"
-dest_files=["res://.godot/imported/bow.png-5c9dbfd1f7d5965f97ffdd405666703f.ctex"]
+source_file="res://assets/images/accessories/detectiveHat.png"
+dest_files=["res://.godot/imported/detectiveHat.png-d8d3564391d05fc943a331cb170f5073.ctex"]
 
 [params]
 

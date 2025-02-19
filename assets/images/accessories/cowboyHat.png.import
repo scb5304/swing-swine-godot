@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://carcmrgxbwlrp"
-path="res://.godot/imported/bow.png-5c9dbfd1f7d5965f97ffdd405666703f.ctex"
+uid="uid://cags1sew602hl"
+path="res://.godot/imported/cowboyHat.png-d401f746f08bf5a17eb0e6afd3ecfa07.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/accessories/bow.png"
-dest_files=["res://.godot/imported/bow.png-5c9dbfd1f7d5965f97ffdd405666703f.ctex"]
+source_file="res://assets/images/accessories/cowboyHat.png"
+dest_files=["res://.godot/imported/cowboyHat.png-d401f746f08bf5a17eb0e6afd3ecfa07.ctex"]
 
 [params]
 
