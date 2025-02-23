@@ -49,3 +49,6 @@ func _on_play_again_button_pressed():
 
 func _on_main_menu_button_pressed():
 	get_tree().change_scene_to_file("res://screens/menu/menu.tscn")
+
+func _on_piggy_coin_count_pressed():
+	get_tree().change_scene_to_file("res://screens/market/piggy_market.tscn")

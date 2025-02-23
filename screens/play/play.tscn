@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" path="res://screens/play/play.gd" id="1_e80q3"]
 [ext_resource type="PackedScene" uid="uid://cbsuvkdplnnqe" path="res://components/background.tscn" id="1_osefx"]
-[ext_resource type="AudioStream" uid="uid://b5nu3b0nkreqe" path="res://assets/sounds/it comes_6.wav" id="3_l3dfv"]
 [ext_resource type="PackedScene" uid="uid://mp5khaij8tqc" path="res://components/audio/sound_button.tscn" id="3_vnmnx"]
 [ext_resource type="PackedScene" uid="uid://bvd76e6u4y8jo" path="res://components/coin/coin.tscn" id="4_3hwp3"]
 [ext_resource type="PackedScene" uid="uid://bc4sgbj5vetsv" path="res://components/audio/music_button.tscn" id="4_sc1ii"]
 [ext_resource type="PackedScene" uid="uid://bf1r7j2wdhh0k" path="res://components/piggy/piggy.tscn" id="4_wqggr"]
 [ext_resource type="PackedScene" uid="uid://cmvf762ty44tn" path="res://components/score/score.tscn" id="5_enghu"]
+[ext_resource type="AudioStream" uid="uid://d33f88vtmpg2m" path="res://assets/sounds/progress_3.wav" id="5_kij4s"]
 
 [node name="PlayContainer" type="Node2D"]
 script = ExtResource("1_e80q3")
@@ -31,7 +31,7 @@ offset_bottom = 61.0
 [node name="Sounds" type="Node" parent="."]
 
 [node name="Music1" type="AudioStreamPlayer" parent="Sounds"]
-stream = ExtResource("3_l3dfv")
+stream = ExtResource("5_kij4s")
 bus = &"Music"
 
 [node name="Coins" type="Node" parent="."]

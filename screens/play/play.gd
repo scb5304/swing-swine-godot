@@ -85,9 +85,9 @@ func _on_coin_collected(hit_coin):
 		$Sounds/Music1.play()
 
 func _increase_speed():
-	var max_speed: float = 5.5
+	var max_speed: float = 7.0
 	var base_speed_increase: float = 0.11
-	var decay_factor: float = 0.05
+	var decay_factor: float = 0.06
 
 	var speed_before: float = speed
 	speed += base_speed_increase / (1 + decay_factor * score)
