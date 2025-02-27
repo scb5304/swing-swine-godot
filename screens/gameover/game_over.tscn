@@ -39,6 +39,7 @@ scale = Vector2(0.714617, 0.720181)
 texture_normal = ExtResource("2_as6nk")
 
 [node name="CoinCountText" type="Label" parent="PiggyCoinCount"]
+layout_mode = 0
 offset_left = 57.3734
 offset_top = 58.3187
 offset_right = 132.373

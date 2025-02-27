@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://b3x5h1144wgjd"]
+[gd_scene load_steps=5 format=3 uid="uid://b3x5h1144wgjd"]
 
 [ext_resource type="Texture2D" uid="uid://g6xokcg7ohdb" path="res://assets/images/accessories/shades.png" id="2_47dvm"]
 
@@ -10,6 +10,10 @@ outline_color = Color(1, 0.117647, 1, 1)
 [sub_resource type="LabelSettings" id="LabelSettings_ke5ks"]
 font_size = 21
 
+[sub_resource type="LabelSettings" id="LabelSettings_ji1bk"]
+font_color = Color(0.941176, 0.470588, 1, 1)
+outline_color = Color(0.443137, 1, 1, 1)
+
 [node name="ShopItem" type="Button"]
 custom_minimum_size = Vector2(0, 75)
 offset_right = 480.0
@@ -17,6 +21,11 @@ offset_bottom = 75.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 mouse_filter = 1
+
+[node name="EquippedRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 480.0
+offset_bottom = 75.0
 
 [node name="Name" type="Label" parent="."]
 layout_mode = 0
@@ -40,3 +49,12 @@ label_settings = SubResource("LabelSettings_ke5ks")
 position = Vector2(54, 38)
 scale = Vector2(0.5625, 0.533333)
 texture = ExtResource("2_47dvm")
+
+[node name="OwnedText" type="Label" parent="."]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 51.0
+offset_right = 342.0
+offset_bottom = 74.0
+text = "OWNED"
+label_settings = SubResource("LabelSettings_ji1bk")

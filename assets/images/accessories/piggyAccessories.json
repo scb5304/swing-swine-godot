@@ -1,173 +1,173 @@
 {
-    "version": "1.0",
-    "accessories":[
-        {
-            "name":"ufoHat",
-            "displayName":"UFO Hat",
-            "slot":"hat",
-            "price":20,
-            "piggyMarketEnabled":true
-        },
-        {
-            "name":"bow",
-            "displayName":"Bow",
-            "slot":"hat",
-            "price":50,
-            "piggyMarketEnabled":true
-        },
-        {
-            "name":"winterHat",
-            "displayName":"Winter Hat",
-            "slot":"hat",
-            "price":100,
-            "piggyMarketEnabled":true
-        },
-        {
-            "name":"boots",
-            "displayName":"Boots",
-            "slot":"feet",
-            "price":150,
-            "piggyMarketEnabled":true
-        },
-        {
-            "name":"ribbon",
-            "displayName":"Ribbon",
-            "slot":"hat",
-            "price":150,
-            "piggyMarketEnabled":true
-        },
-        {
-            "name":"birthdayHat",
-            "displayName":"Birthday Hat",
-            "slot":"hat",
-            "price":250,
-            "piggyMarketEnabled":true
-        },
-        {
-            "name":"cowboyHat",
-            "displayName":"Cowboy Hat",
-            "slot":"hat",
-            "price":300,
-            "piggyMarketEnabled":true
-        },
-        {
-            "name":"baseballCap",
-            "displayName":"Baseball Cap",
-            "slot":"hat",
-            "price":300,
-            "piggyMarketEnabled":true
-        },
-        {
-            "name":"festiveSombrero",
-            "displayName":"Festive Sombrero",
-            "slot":"hat",
-            "price":400,
-            "piggyMarketEnabled":true
-        },
-        {
-            "name":"policeOfficerCap",
-            "displayName":"Police Officer Cap",
-            "slot":"hat",
-            "price":500,
-            "piggyMarketEnabled":true
-        },
-        {
-            "name":"sneakers",
-            "displayName":"Sneakers",
-            "slot":"feet",
-            "price":700,
-            "piggyMarketEnabled":true
-        },
-        {
-            "name":"theCombo",
-            "displayName":"The Combo",
-            "slot":"mustache",
-            "price":750,
-            "piggyMarketEnabled":true
-        },
-        {
-            "name":"convincingMustache",
-            "displayName":"Convincing Mustache",
-            "slot":"mustache",
-            "price":750,
-            "piggyMarketEnabled":true
-        },
-        {
-            "name":"graduationCap",
-            "displayName":"Graduation Cap",
-            "slot":"hat",
-            "price":800,
-            "piggyMarketEnabled":true
-        },
-        {
-            "name":"detectiveHat",
-            "displayName":"Detective Hat",
-            "slot":"hat",
-            "price":800,
-            "piggyMarketEnabled":true
-        },
-        {
-            "name":"witchHat",
-            "displayName":"Witch's Hat",
-            "slot":"hat",
-            "price":1000,
-            "piggyMarketEnabled":true
-        },
-        {
-            "name":"jesterHat",
-            "displayName":"Jester Hat",
-            "slot":"hat",
-            "price":1000,
-            "piggyMarketEnabled":true
-        },
-        {
-            "name":"shades",
-            "displayName":"Shades",
-            "slot":"eyes",
-            "price":1500,
-            "piggyMarketEnabled":true
-        },
-        {
-            "name":"tennisShoes",
-            "displayName":"Tennis Shoes",
-            "slot":"feet",
-            "price":1500,
-            "piggyMarketEnabled":true
-        },
-        {
-            "name":"strawHat",
-            "displayName":"Cute Straw Hat",
-            "slot":"hat",
-            "price":2000,
-            "piggyMarketEnabled":true
-        },
-        {
-            "name":"fedora",
-            "displayName":"Fedora",
-            "slot":"hat",
-            "price":2000,
-            "piggyMarketEnabled":true
-        },
-        {
-            "name":"topHat",
-            "displayName":"Top Hat",
-            "slot":"hat",
-            "price":2500,
-            "piggyMarketEnabled":true
-        },
-        {
-            "name":"americanHat",
-            "displayName":"Patriotic Hat",
-            "slot":"hat",
-            "price":5000,
-            "piggyMarketEnabled":true
-        },
-        {
-            "name":"awardRibbon",
-            "displayName":"The Award Ribbon",
-            "slot":"chestAward",
-            "price":100000,
-            "piggyMarketEnabled":true
-        }
-    ]
+	"version": "1.0",
+	"accessories":[
+		{
+			"name":"ufoHat",
+			"displayName":"UFO Hat",
+			"slot":"hat",
+			"price":20,
+			"piggyMarketEnabled":true
+		},
+		{
+			"name":"bow",
+			"displayName":"Bow",
+			"slot":"hat",
+			"price":50,
+			"piggyMarketEnabled":true
+		},
+		{
+			"name":"winterHat",
+			"displayName":"Winter Hat",
+			"slot":"hat",
+			"price":100,
+			"piggyMarketEnabled":true
+		},
+		{
+			"name":"boots",
+			"displayName":"Boots",
+			"slot":"feet",
+			"price":150,
+			"piggyMarketEnabled":true
+		},
+		{
+			"name":"ribbon",
+			"displayName":"Ribbon",
+			"slot":"hat",
+			"price":150,
+			"piggyMarketEnabled":true
+		},
+		{
+			"name":"birthdayHat",
+			"displayName":"Birthday Hat",
+			"slot":"hat",
+			"price":250,
+			"piggyMarketEnabled":true
+		},
+		{
+			"name":"cowboyHat",
+			"displayName":"Cowboy Hat",
+			"slot":"hat",
+			"price":300,
+			"piggyMarketEnabled":true
+		},
+		{
+			"name":"baseballCap",
+			"displayName":"Baseball Cap",
+			"slot":"hat",
+			"price":300,
+			"piggyMarketEnabled":true
+		},
+		{
+			"name":"festiveSombrero",
+			"displayName":"Festive Sombrero",
+			"slot":"hat",
+			"price":400,
+			"piggyMarketEnabled":true
+		},
+		{
+			"name":"policeOfficerCap",
+			"displayName":"Police Officer Cap",
+			"slot":"hat",
+			"price":500,
+			"piggyMarketEnabled":true
+		},
+		{
+			"name":"sneakers",
+			"displayName":"Sneakers",
+			"slot":"feet",
+			"price":700,
+			"piggyMarketEnabled":true
+		},
+		{
+			"name":"theCombo",
+			"displayName":"The Combo",
+			"slot":"mustache",
+			"price":750,
+			"piggyMarketEnabled":true
+		},
+		{
+			"name":"convincingMustache",
+			"displayName":"Convincing Mustache",
+			"slot":"mustache",
+			"price":750,
+			"piggyMarketEnabled":true
+		},
+		{
+			"name":"graduationCap",
+			"displayName":"Graduation Cap",
+			"slot":"hat",
+			"price":800,
+			"piggyMarketEnabled":true
+		},
+		{
+			"name":"detectiveHat",
+			"displayName":"Detective Hat",
+			"slot":"hat",
+			"price":800,
+			"piggyMarketEnabled":true
+		},
+		{
+			"name":"witchHat",
+			"displayName":"Witch's Hat",
+			"slot":"hat",
+			"price":1000,
+			"piggyMarketEnabled":true
+		},
+		{
+			"name":"jesterHat",
+			"displayName":"Jester Hat",
+			"slot":"hat",
+			"price":1000,
+			"piggyMarketEnabled":true
+		},
+		{
+			"name":"shades",
+			"displayName":"Shades",
+			"slot":"eyes",
+			"price":1500,
+			"piggyMarketEnabled":true
+		},
+		{
+			"name":"tennisShoes",
+			"displayName":"Tennis Shoes",
+			"slot":"feet",
+			"price":1500,
+			"piggyMarketEnabled":true
+		},
+		{
+			"name":"strawHat",
+			"displayName":"Cute Straw Hat",
+			"slot":"hat",
+			"price":2000,
+			"piggyMarketEnabled":true
+		},
+		{
+			"name":"fedora",
+			"displayName":"Fedora",
+			"slot":"hat",
+			"price":2000,
+			"piggyMarketEnabled":true
+		},
+		{
+			"name":"topHat",
+			"displayName":"Top Hat",
+			"slot":"hat",
+			"price":2500,
+			"piggyMarketEnabled":true
+		},
+		{
+			"name":"americanHat",
+			"displayName":"Patriotic Hat",
+			"slot":"hat",
+			"price":5000,
+			"piggyMarketEnabled":true
+		},
+		{
+			"name":"awardRibbon",
+			"displayName":"The Award Ribbon",
+			"slot":"chestAward",
+			"price":100000,
+			"piggyMarketEnabled":true
+		}
+	]
 }
