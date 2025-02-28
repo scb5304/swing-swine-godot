@@ -4,7 +4,7 @@ const SAVE_PATH = "user://savegame.json"
 
 var last_score: int = 0
 var high_score: int = 0
-var money_total: int = 99999999
+var money_total: int = 9999
 var setting_music_enabled: bool = true
 var setting_sound_effects_enabled: bool = true
 var items = []
