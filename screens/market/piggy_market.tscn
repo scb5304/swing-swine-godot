@@ -7,11 +7,8 @@
 [sub_resource type="LabelSettings" id="LabelSettings_y2vqn"]
 font_size = 22
 
-[sub_resource type="LabelSettings" id="LabelSettings_0js76"]
-font_size = 44
-outline_color = Color(0, 0, 0, 1)
-shadow_color = Color(0, 0, 0, 0.34902)
-shadow_offset = Vector2(1.5, 1)
+[sub_resource type="LabelSettings" id="LabelSettings_a1cv6"]
+font_size = 26
 
 [node name="PiggyMarketContainer" type="Control"]
 layout_mode = 3
@@ -44,13 +41,14 @@ stretch_mode = 5
 
 [node name="CoinCountText" type="Label" parent="PiggyCoinCount"]
 layout_mode = 0
-offset_left = 36.3831
-offset_top = 34.7135
-offset_right = 111.383
-offset_bottom = 95.7135
+offset_left = 18.1916
+offset_top = 33.325
+offset_right = 127.192
+offset_bottom = 94.325
 text = "150"
-label_settings = SubResource("LabelSettings_0js76")
+label_settings = SubResource("LabelSettings_a1cv6")
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 layout_mode = 0
