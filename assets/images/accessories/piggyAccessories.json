@@ -165,7 +165,7 @@
 		{
 			"name":"awardRibbon",
 			"displayName":"The Award Ribbon",
-			"slot":"chestAward",
+			"slot":"chestaward",
 			"price":100000,
 			"piggyMarketEnabled":true
 		}

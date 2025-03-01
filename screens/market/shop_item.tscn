@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://b3x5h1144wgjd"]
+[gd_scene load_steps=7 format=3 uid="uid://b3x5h1144wgjd"]
 
+[ext_resource type="Script" path="res://screens/market/shop_item.gd" id="1_64t37"]
 [ext_resource type="Texture2D" uid="uid://g6xokcg7ohdb" path="res://assets/images/accessories/shades.png" id="2_47dvm"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_tr3ld"]
@@ -24,6 +25,7 @@ offset_bottom = 75.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 mouse_filter = 1
+script = ExtResource("1_64t37")
 
 [node name="EquippedRect" type="TextureRect" parent="."]
 layout_mode = 0

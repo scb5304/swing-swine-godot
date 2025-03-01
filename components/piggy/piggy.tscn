@@ -48,7 +48,7 @@ rotation = -1.72788
 scale = Vector2(0.575465, 0.491033)
 texture = ExtResource("6_gpyi3")
 
-[node name="ChestAwardSlot" type="Sprite2D" parent="EquipmentSlots"]
+[node name="ChestawardSlot" type="Sprite2D" parent="EquipmentSlots"]
 position = Vector2(-31, -153)
 rotation = 1.31074
 scale = Vector2(0.201, 0.2)
