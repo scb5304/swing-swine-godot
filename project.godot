@@ -23,6 +23,10 @@ GameData="*res://global/game_data.gd"
 
 window/size/viewport_width=480
 window/size/viewport_height=720
+window/size/mode=2
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+window/handheld/orientation=5
 
 [editor]
 
@@ -44,3 +48,4 @@ pointing/emulate_touch_from_mouse=true
 [rendering]
 
 renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true
