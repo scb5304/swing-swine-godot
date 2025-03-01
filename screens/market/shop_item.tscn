@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://b3x5h1144wgjd"]
+[gd_scene load_steps=6 format=3 uid="uid://b3x5h1144wgjd"]
 
 [ext_resource type="Texture2D" uid="uid://g6xokcg7ohdb" path="res://assets/images/accessories/shades.png" id="2_47dvm"]
 
@@ -11,8 +11,11 @@ outline_color = Color(1, 0.117647, 1, 1)
 font_size = 21
 
 [sub_resource type="LabelSettings" id="LabelSettings_ji1bk"]
-font_color = Color(0.941176, 0.470588, 1, 1)
+font_color = Color(0.941176, 0.470588, 1, 0.584314)
 outline_color = Color(0.443137, 1, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_bqtgx"]
+font_color = Color(1, 0.219608, 1, 1)
 
 [node name="ShopItem" type="Button"]
 custom_minimum_size = Vector2(0, 75)
@@ -29,12 +32,14 @@ offset_bottom = 75.0
 
 [node name="Name" type="Label" parent="."]
 layout_mode = 0
-offset_left = 281.0
-offset_top = 23.0
-offset_right = 395.0
-offset_bottom = 53.0
-text = "Sunglasses"
+offset_left = 268.0
+offset_top = 5.0
+offset_right = 473.0
+offset_bottom = 68.0
+text = "Convincing Mustache"
 label_settings = SubResource("LabelSettings_tr3ld")
+vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="Price" type="Label" parent="."]
 layout_mode = 0
@@ -51,10 +56,21 @@ scale = Vector2(0.5625, 0.533333)
 texture = ExtResource("2_47dvm")
 
 [node name="OwnedText" type="Label" parent="."]
+visible = false
 layout_mode = 0
-offset_left = 281.0
+offset_left = 31.0
 offset_top = 51.0
-offset_right = 342.0
+offset_right = 92.0
 offset_bottom = 74.0
 text = "OWNED"
 label_settings = SubResource("LabelSettings_ji1bk")
+
+[node name="EquippedText" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 26.0
+offset_top = 51.0
+offset_right = 105.0
+offset_bottom = 74.0
+text = "EQUIPPED"
+label_settings = SubResource("LabelSettings_bqtgx")
