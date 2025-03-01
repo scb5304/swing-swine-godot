@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://2gtmr6l7vjbf"]
+[gd_scene load_steps=11 format=3 uid="uid://2gtmr6l7vjbf"]
 
 [ext_resource type="PackedScene" uid="uid://cbsuvkdplnnqe" path="res://components/background.tscn" id="1_8tdqm"]
 [ext_resource type="Script" path="res://screens/menu/menu.gd" id="1_qt6qt"]
@@ -7,8 +7,13 @@
 [ext_resource type="Texture2D" uid="uid://bxoys2ixkxswq" path="res://assets/images/game/piggy_coin_count.png" id="5_54soc"]
 [ext_resource type="Texture2D" uid="uid://cdceit128dnlq" path="res://assets/images/icons/icon.svg" id="6_jtcqb"]
 [ext_resource type="Script" path="res://screens/menu/piggy_plain.gd" id="7_cwepi"]
+[ext_resource type="AudioStream" uid="uid://dbc0b5uw3f4mr" path="res://assets/sounds/piggy_oink.mp3" id="8_34u7h"]
 
 [sub_resource type="Theme" id="Theme_xd5cp"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ll0xg"]
+radius = 53.2904
+height = 143.218
 
 [node name="MenuContainer" type="Node2D"]
 script = ExtResource("1_qt6qt")
@@ -51,13 +56,26 @@ rotation = -0.120428
 scale = Vector2(0.9, 0.9)
 texture = ExtResource("3_7j48y")
 
-[node name="PiggyPlain" type="Sprite2D" parent="Logo"]
-position = Vector2(-192.186, 52.8497)
+[node name="PiggyPlain" type="Area2D" parent="Logo"]
+position = Vector2(-192.72, 57.262)
+scale = Vector2(1, 1)
+script = ExtResource("7_cwepi")
+
+[node name="Sprite2D" type="Sprite2D" parent="Logo/PiggyPlain"]
+position = Vector2(1.103, 0.13348)
 rotation = 0.16057
 scale = Vector2(0.666667, 0.666667)
 texture = ExtResource("4_232b5")
 offset = Vector2(0.000328064, 145)
-script = ExtResource("7_cwepi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Logo/PiggyPlain"]
+position = Vector2(-9.23129, 141.023)
+rotation = 0.16057
+scale = Vector2(0.666667, 0.666667)
+shape = SubResource("CapsuleShape2D_ll0xg")
+
+[node name="OinkSound" type="AudioStreamPlayer" parent="Logo/PiggyPlain"]
+stream = ExtResource("8_34u7h")
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="PiggyMarketButton" to="." method="_on_piggy_market_button_pressed"]
