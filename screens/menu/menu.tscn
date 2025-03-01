@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://2gtmr6l7vjbf"]
+[gd_scene load_steps=9 format=3 uid="uid://2gtmr6l7vjbf"]
 
 [ext_resource type="PackedScene" uid="uid://cbsuvkdplnnqe" path="res://components/background.tscn" id="1_8tdqm"]
 [ext_resource type="Script" path="res://screens/menu/menu.gd" id="1_qt6qt"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dgqmrmi6ixsdp" path="res://assets/images/game/piggy_plain.png" id="4_232b5"]
 [ext_resource type="Texture2D" uid="uid://bxoys2ixkxswq" path="res://assets/images/game/piggy_coin_count.png" id="5_54soc"]
 [ext_resource type="Texture2D" uid="uid://cdceit128dnlq" path="res://assets/images/icons/icon.svg" id="6_jtcqb"]
+[ext_resource type="Script" path="res://screens/menu/piggy_plain.gd" id="7_cwepi"]
 
 [sub_resource type="Theme" id="Theme_xd5cp"]
 
@@ -51,10 +52,12 @@ scale = Vector2(0.9, 0.9)
 texture = ExtResource("3_7j48y")
 
 [node name="PiggyPlain" type="Sprite2D" parent="Logo"]
-position = Vector2(-226.457, 169.578)
-rotation = 0.120428
+position = Vector2(-192.186, 52.8497)
+rotation = 0.16057
 scale = Vector2(0.666667, 0.666667)
 texture = ExtResource("4_232b5")
+offset = Vector2(0.000328064, 145)
+script = ExtResource("7_cwepi")
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="PiggyMarketButton" to="." method="_on_piggy_market_button_pressed"]
