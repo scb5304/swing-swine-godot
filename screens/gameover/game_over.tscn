@@ -7,7 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://bphbn0dy130mj" path="res://assets/sounds/high_score.mp3" id="5_a3xye"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_adjc2"]
-font_size = 44
+font_size = 34
 outline_color = Color(0, 0, 0, 1)
 shadow_color = Color(0, 0, 0, 0.34902)
 shadow_offset = Vector2(1.5, 1)
@@ -40,10 +40,10 @@ texture_normal = ExtResource("2_as6nk")
 
 [node name="CoinCountText" type="Label" parent="PiggyCoinCount"]
 layout_mode = 0
-offset_left = 57.3734
-offset_top = 58.3187
-offset_right = 132.373
-offset_bottom = 119.319
+offset_left = 34.9838
+offset_top = 61.0958
+offset_right = 153.984
+offset_bottom = 122.096
 text = "150"
 label_settings = SubResource("LabelSettings_adjc2")
 horizontal_alignment = 1

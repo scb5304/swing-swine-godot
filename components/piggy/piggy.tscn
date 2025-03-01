@@ -5,8 +5,8 @@
 [ext_resource type="AudioStream" uid="uid://chtjs54f57w21" path="res://assets/sounds/piggy_flip.mp3" id="3_xvfmu"]
 [ext_resource type="Texture2D" uid="uid://dvapos0jau7c1" path="res://assets/images/accessories/ufoHat.png" id="4_7apvx"]
 [ext_resource type="Texture2D" uid="uid://g6xokcg7ohdb" path="res://assets/images/accessories/shades.png" id="4_t6j7o"]
-[ext_resource type="Texture2D" uid="uid://d3jphk1lohla7" path="res://assets/images/accessories/boots.png" id="5_j3n5x"]
 [ext_resource type="Texture2D" uid="uid://d3uvmdjncstsf" path="res://assets/images/accessories/convincingMustache.png" id="6_gpyi3"]
+[ext_resource type="Texture2D" uid="uid://dlapmfg675eno" path="res://assets/images/accessories/awardRibbon.png" id="7_qfd0d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oj5t8"]
 size = Vector2(73, 111)
@@ -48,17 +48,8 @@ rotation = -1.72788
 scale = Vector2(0.575465, 0.491033)
 texture = ExtResource("6_gpyi3")
 
-[node name="BootsSlots" type="Node2D" parent="EquipmentSlots"]
-visible = false
-
-[node name="BootsSlot1" type="Sprite2D" parent="EquipmentSlots/BootsSlots"]
-position = Vector2(-56.3251, -129.234)
-rotation = 1.56032
-scale = Vector2(0.562891, 0.626115)
-texture = ExtResource("5_j3n5x")
-
-[node name="BootsSlot2" type="Sprite2D" parent="EquipmentSlots/BootsSlots"]
-position = Vector2(-54.3251, -113.234)
-rotation = 1.56032
-scale = Vector2(0.490718, 0.576991)
-texture = ExtResource("5_j3n5x")
+[node name="ChestAwardSlot" type="Sprite2D" parent="EquipmentSlots"]
+position = Vector2(-31, -153)
+rotation = 1.31074
+scale = Vector2(0.201, 0.2)
+texture = ExtResource("7_qfd0d")
