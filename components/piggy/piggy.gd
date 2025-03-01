@@ -2,45 +2,28 @@ extends CharacterBody2D
 
 var color = "Silver"
 
-var hat_slot_item
-var eyes_slot_item
-var mustache_slot_item
-var chest_award_slot_item
+var equipment_slots = {}
 
 func _ready():
-	$EquipmentSlots/HatSlot.visible = false
-	$EquipmentSlots/EyesSlot.visible = false
-	$EquipmentSlots/MustacheSlot.visible = false
-	$EquipmentSlots/ChestAwardSlot.visible = false
+	for slot in $EquipmentSlots.get_children():
+		var key = slot.name.replace("Slot", "").to_lower()
+		equipment_slots[key] = slot
+		slot.visible = false
+
 	for item in GameData.items:
 		if item.get("equipped", false):
-			if item.slot == "hat":
-				hat_slot_item = item
-				_equip(hat_slot_item)
-			if (item.slot == "eyes"):
-				eyes_slot_item = item
-				_equip(eyes_slot_item)
-			if (item.slot == "mustache"):
-				mustache_slot_item = item
-				_equip(mustache_slot_item)
-			if (item.slot == "chestAward"):
-				chest_award_slot_item = item
-				_equip(chest_award_slot_item)
-			
+			_equip(item)
+
 func _equip(item):
-	var texture = load("res://assets/images/accessories/" + item.name + ".png")
-	if item.slot == "hat":
-		$EquipmentSlots/HatSlot.texture = texture
-		$EquipmentSlots/HatSlot.visible = true
-	if item.slot == "eyes":
-		$EquipmentSlots/EyesSlot.texture = texture
-		$EquipmentSlots/EyesSlot.visible = true
-	if item.slot == "mustache":
-		$EquipmentSlots/MustacheSlot.texture = texture
-		$EquipmentSlots/MustacheSlot.visible = true
-	if item.slot == "chestAward":
-		$EquipmentSlots/ChestAwardSlot.texture = texture
-		$EquipmentSlots/ChestAwardSlot.visible = true
+	var texture_path = "res://assets/images/accessories/" + item.name + ".png"
+	var texture = load(texture_path)
+
+	if equipment_slots.has(item.slot):
+		var slot_node = equipment_slots[item.slot]
+		slot_node.texture = texture
+		slot_node.visible = true
+	else:
+		push_warning("No equipment slot found for: " + item.slot)
 
 func toggle_piggy_state(is_pressed):
 	if is_pressed:
