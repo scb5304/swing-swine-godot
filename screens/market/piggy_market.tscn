@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://dk05btb5p48wl"]
 
 [ext_resource type="Script" path="res://screens/market/piggy_market.gd" id="1_5gs6b"]
-[ext_resource type="PackedScene" uid="uid://cbsuvkdplnnqe" path="res://components/background.tscn" id="2_6cej6"]
+[ext_resource type="PackedScene" uid="uid://bhpnlwtvs15ws" path="res://components/background/background.tscn" id="2_sx3vk"]
 [ext_resource type="Texture2D" uid="uid://bxoys2ixkxswq" path="res://assets/images/game/piggy_coin_count.png" id="3_7q8tj"]
 [ext_resource type="AudioStream" uid="uid://d3rm3kc68xnxn" path="res://assets/sounds/cha_ching.mp3" id="4_18lm0"]
 
@@ -14,7 +14,7 @@ font_size = 26
 [node name="PiggyMarketContainer" type="CanvasLayer"]
 script = ExtResource("1_5gs6b")
 
-[node name="Background" parent="." instance=ExtResource("2_6cej6")]
+[node name="Background" parent="." instance=ExtResource("2_sx3vk")]
 
 [node name="Label" type="Label" parent="."]
 offset_left = 29.0

@@ -57,7 +57,7 @@ scale = Vector2(0.9, 0.9)
 texture = ExtResource("3_7j48y")
 
 [node name="PiggyPlain" type="Area2D" parent="Logo"]
-position = Vector2(-192.72, 57.262)
+position = Vector2(-193.289, 52.7162)
 script = ExtResource("7_cwepi")
 
 [node name="Sprite2D" type="Sprite2D" parent="Logo/PiggyPlain"]
