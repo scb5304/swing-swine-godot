@@ -1,4 +1,4 @@
-extends Node2D
+extends CanvasLayer
 
 const Coin = preload("res://components/coin/coin.gd")
 const DEBUG_DISABLE_COIN_CLASH: bool = false
@@ -124,6 +124,7 @@ func _end_game():
 	game_over = true
 	speed = 0
 	GameData.last_score = score
+	$Sounds/Music1.stop()
 	$EndGameTimer.start()
 
 func _on_end_game_timer_timeout():

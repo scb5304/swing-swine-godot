@@ -15,10 +15,17 @@
 radius = 53.2904
 height = 143.218
 
-[node name="MenuContainer" type="Node2D"]
+[node name="MenuContainer" type="CanvasLayer"]
 script = ExtResource("1_qt6qt")
 
 [node name="Background" parent="." instance=ExtResource("1_8tdqm")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="PlayButton" type="Button" parent="."]
 offset_left = 23.0

@@ -1,4 +1,4 @@
-extends Control
+extends CanvasLayer
 
 const ShopItemScene = preload("res://screens/market/shop_item.tscn")
 

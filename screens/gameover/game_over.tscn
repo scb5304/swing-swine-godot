@@ -21,12 +21,15 @@ shadow_color = Color(0, 0, 0, 0.65098)
 font_size = 50
 shadow_color = Color(0, 0, 0, 0.447059)
 
-[node name="GameOverContainer" type="Node2D"]
+[node name="GameOverContainer" type="CanvasLayer"]
 script = ExtResource("1_20b8p")
 
 [node name="Background" type="TextureRect" parent="."]
-offset_right = 480.0
-offset_bottom = 720.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("1_5lk0a")
 expand_mode = 5
 
