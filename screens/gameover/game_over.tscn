@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://h2uyoy5ibchv"]
 
-[ext_resource type="Texture2D" uid="uid://dw84oyssktx57" path="res://assets/images/brand/backdrop_sky.jpg" id="1_5lk0a"]
 [ext_resource type="Script" path="res://screens/gameover/game_over.gd" id="1_20b8p"]
 [ext_resource type="Texture2D" uid="uid://bxoys2ixkxswq" path="res://assets/images/game/piggy_coin_count.png" id="2_as6nk"]
+[ext_resource type="PackedScene" uid="uid://bhpnlwtvs15ws" path="res://components/background/background.tscn" id="2_ylboh"]
 [ext_resource type="Texture2D" uid="uid://cr82ku73s2tq4" path="res://assets/images/game/coin_arrow.png" id="3_gkl3a"]
 [ext_resource type="AudioStream" uid="uid://bphbn0dy130mj" path="res://assets/sounds/high_score.mp3" id="5_a3xye"]
 
@@ -24,14 +24,7 @@ shadow_color = Color(0, 0, 0, 0.447059)
 [node name="GameOverContainer" type="CanvasLayer"]
 script = ExtResource("1_20b8p")
 
-[node name="Background" type="TextureRect" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("1_5lk0a")
-expand_mode = 5
+[node name="Background" parent="." instance=ExtResource("2_ylboh")]
 
 [node name="PiggyCoinCount" type="TextureButton" parent="."]
 offset_left = 342.0

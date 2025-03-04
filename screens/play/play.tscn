@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://x4bnweudk8vs"]
 
 [ext_resource type="Script" path="res://screens/play/play.gd" id="1_e80q3"]
-[ext_resource type="PackedScene" uid="uid://cbsuvkdplnnqe" path="res://components/background.tscn" id="1_osefx"]
+[ext_resource type="PackedScene" uid="uid://bhpnlwtvs15ws" path="res://components/background/background.tscn" id="2_b01ot"]
 [ext_resource type="PackedScene" uid="uid://mp5khaij8tqc" path="res://components/audio/sound_button.tscn" id="3_vnmnx"]
 [ext_resource type="PackedScene" uid="uid://bvd76e6u4y8jo" path="res://components/coin/coin.tscn" id="4_3hwp3"]
 [ext_resource type="PackedScene" uid="uid://bc4sgbj5vetsv" path="res://components/audio/music_button.tscn" id="4_sc1ii"]
@@ -12,16 +12,9 @@
 [node name="PlayContainer" type="CanvasLayer"]
 script = ExtResource("1_e80q3")
 
-[node name="EndGameTimer" type="Timer" parent="."]
+[node name="Background" parent="." instance=ExtResource("2_b01ot")]
 
-[node name="Background" parent="." instance=ExtResource("1_osefx")]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 0.0
-offset_bottom = 0.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="EndGameTimer" type="Timer" parent="."]
 
 [node name="SoundButton" parent="." instance=ExtResource("3_vnmnx")]
 offset_left = 303.0

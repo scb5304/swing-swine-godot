@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://blg8r2fhgmpvk"]
 
 [ext_resource type="Script" path="res://screens/settings/settings.gd" id="1_erh5t"]
-[ext_resource type="Texture2D" uid="uid://dw84oyssktx57" path="res://assets/images/brand/backdrop_sky.jpg" id="2_ydmuq"]
+[ext_resource type="PackedScene" uid="uid://bhpnlwtvs15ws" path="res://components/background/background.tscn" id="2_al6c0"]
 [ext_resource type="PackedScene" uid="uid://mp5khaij8tqc" path="res://components/audio/sound_button.tscn" id="3_ul6sq"]
 [ext_resource type="PackedScene" uid="uid://bc4sgbj5vetsv" path="res://components/audio/music_button.tscn" id="4_nwecf"]
 
@@ -14,14 +14,7 @@ shadow_offset = Vector2(1.5, 1)
 [node name="SettingsContainer" type="CanvasLayer"]
 script = ExtResource("1_erh5t")
 
-[node name="Background" type="TextureRect" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_ydmuq")
-expand_mode = 5
+[node name="Background" parent="." instance=ExtResource("2_al6c0")]
 
 [node name="SettingsText" type="Label" parent="."]
 offset_left = 160.0

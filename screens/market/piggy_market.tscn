@@ -15,13 +15,6 @@ font_size = 26
 script = ExtResource("1_5gs6b")
 
 [node name="Background" parent="." instance=ExtResource("2_6cej6")]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 0.0
-offset_bottom = 0.0
-grow_horizontal = 2
-grow_vertical = 2
 
 [node name="Label" type="Label" parent="."]
 offset_left = 29.0
