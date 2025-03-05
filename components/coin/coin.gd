@@ -11,20 +11,20 @@ const COIN_MOD_ULTRA = "ULTRA"
 const COIN_ODDS_FLIP = 14
 
 # Disable for now, needs to be a "bonus" score or something, too cheesy
-const COIN_ODDS_ULTRA = 50000000
+const COIN_ODDS_ULTRA = 500
 
 var type: String
 var color : String
 var mod: String
 
 func _ready():
-	spawn()
-	
-func spawn():
+	spawn(0)
+
+func spawn(score: int):
 	type = ""
 	color = ""
 	
-	if (randi() % COIN_ODDS_FLIP == 1):
+	if (score > 4 and randi() % COIN_ODDS_FLIP == 1):
 		type = COIN_TYPE_FLIP
 		$Sprite2D.texture = preload("res://assets/images/game/coin_arrow.png")
 		$CoinArrowSpawnSound.play()

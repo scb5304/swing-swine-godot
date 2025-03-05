@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://x4bnweudk8vs"]
+[gd_scene load_steps=13 format=3 uid="uid://x4bnweudk8vs"]
 
 [ext_resource type="Script" path="res://screens/play/play.gd" id="1_e80q3"]
 [ext_resource type="PackedScene" uid="uid://bhpnlwtvs15ws" path="res://components/background/background.tscn" id="2_b01ot"]
@@ -8,13 +8,26 @@
 [ext_resource type="PackedScene" uid="uid://bf1r7j2wdhh0k" path="res://components/piggy/piggy.tscn" id="4_wqggr"]
 [ext_resource type="PackedScene" uid="uid://cmvf762ty44tn" path="res://components/score/score.tscn" id="5_enghu"]
 [ext_resource type="AudioStream" uid="uid://d33f88vtmpg2m" path="res://assets/sounds/progress_3.wav" id="5_kij4s"]
+[ext_resource type="Texture2D" uid="uid://cjodnq5kupikp" path="res://assets/images/brand/gray.png" id="9_71r0j"]
+
+[sub_resource type="Theme" id="Theme_6eksr"]
+
+[sub_resource type="GDScript" id="GDScript_0gluw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3ubq6"]
+font_size = 26
 
 [node name="PlayContainer" type="CanvasLayer"]
 script = ExtResource("1_e80q3")
 
 [node name="Background" parent="." instance=ExtResource("2_b01ot")]
 
+[node name="StartGameTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
 [node name="EndGameTimer" type="Timer" parent="."]
+one_shot = true
 
 [node name="SoundButton" parent="." instance=ExtResource("3_vnmnx")]
 offset_left = 303.0
@@ -52,9 +65,44 @@ position = Vector2(250, 236)
 
 [node name="Score" parent="." instance=ExtResource("5_enghu")]
 
+[node name="TutorialPanel" type="TextureRect" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.831373)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+theme = SubResource("Theme_6eksr")
+texture = ExtResource("9_71r0j")
+script = SubResource("GDScript_0gluw")
+
+[node name="Label" type="Label" parent="TutorialPanel"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 40.0
+offset_top = -89.0
+offset_right = -29.0
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Your piggy will collect coins that match the coin color on its side.
+
+When your finger is on the screen, it will accept cold goins. Otherwise it can only collect silver coins.
+
+Collect as many as you can. Good luck!"
+label_settings = SubResource("LabelSettings_3ubq6")
+autowrap_mode = 3
+
+[connection signal="timeout" from="StartGameTimer" to="." method="_on_start_game_timer_timeout"]
 [connection signal="timeout" from="EndGameTimer" to="." method="_on_end_game_timer_timeout"]
 [connection signal="finished" from="Sounds/Music1" to="." method="_on_music_1_finished"]
 [connection signal="body_entered" from="Coins/RightCoin" to="." method="_on_right_coin_body_entered"]
 [connection signal="body_entered" from="Coins/BottomCoin" to="." method="_on_bottom_coin_body_entered"]
 [connection signal="body_entered" from="Coins/LeftCoin" to="." method="_on_left_coin_body_entered"]
 [connection signal="body_entered" from="Coins/TopCoin" to="." method="_on_top_coin_body_entered"]
+[connection signal="gui_input" from="TutorialPanel" to="." method="_on_tutorial_panel_gui_input"]
