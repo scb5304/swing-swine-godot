@@ -18,6 +18,7 @@ func _ready():
 		game_inactive = true
 		$TutorialPanel.visible = true
 	else:
+		$TutorialPanel.visible = false
 		$StartGameTimer.start()
 
 func _on_tutorial_panel_gui_input(event):

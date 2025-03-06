@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://h2uyoy5ibchv"]
+[gd_scene load_steps=10 format=3 uid="uid://h2uyoy5ibchv"]
 
 [ext_resource type="Script" path="res://screens/gameover/game_over.gd" id="1_20b8p"]
 [ext_resource type="Texture2D" uid="uid://bxoys2ixkxswq" path="res://assets/images/game/piggy_coin_count.png" id="2_as6nk"]
 [ext_resource type="PackedScene" uid="uid://bhpnlwtvs15ws" path="res://components/background/background.tscn" id="2_ylboh"]
 [ext_resource type="Texture2D" uid="uid://cr82ku73s2tq4" path="res://assets/images/game/coin_arrow.png" id="3_gkl3a"]
+[ext_resource type="Theme" uid="uid://c7dkyme878fgs" path="res://components/button_theme.tres" id="4_ogobv"]
 [ext_resource type="AudioStream" uid="uid://bphbn0dy130mj" path="res://assets/sounds/high_score.mp3" id="5_a3xye"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_adjc2"]
@@ -68,6 +69,7 @@ offset_left = 97.0
 offset_top = 470.0
 offset_right = 388.0
 offset_bottom = 564.0
+theme = ExtResource("4_ogobv")
 text = "Play Again"
 icon = ExtResource("3_gkl3a")
 
@@ -76,6 +78,7 @@ offset_left = 145.0
 offset_top = 619.0
 offset_right = 352.0
 offset_bottom = 675.0
+theme = ExtResource("4_ogobv")
 text = "Main Menu"
 
 [node name="HighScoreSound" type="AudioStreamPlayer" parent="."]

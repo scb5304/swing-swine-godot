@@ -92,7 +92,7 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Your piggy will collect coins that match the coin color on its side.
 
-When your finger is on the screen, it will accept cold goins. Otherwise it can only collect silver coins.
+When your finger is on the screen, it will accept cold goins. When you aren't touching the screen, it will collect silver coins!
 
 Collect as many as you can. Good luck!"
 label_settings = SubResource("LabelSettings_3ubq6")
