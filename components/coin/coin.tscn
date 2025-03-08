@@ -7,13 +7,14 @@
 [ext_resource type="AudioStream" uid="uid://titrfyqa08il" path="res://assets/sounds/coin_arrow.mp3" id="5_cpoij"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nnu0v"]
-radius = 17.72
+radius = 25.5797
 
 [node name="Coin" type="Area2D"]
+scale = Vector2(0.9, 0.9)
 script = ExtResource("1_dlbmr")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.6, 0.6)
+scale = Vector2(0.9, 0.9)
 texture = ExtResource("1_4ual3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

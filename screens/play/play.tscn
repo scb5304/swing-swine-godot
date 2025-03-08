@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://x4bnweudk8vs"]
+[gd_scene load_steps=14 format=3 uid="uid://x4bnweudk8vs"]
 
 [ext_resource type="Script" path="res://screens/play/play.gd" id="1_e80q3"]
 [ext_resource type="PackedScene" uid="uid://bhpnlwtvs15ws" path="res://components/background/background.tscn" id="2_b01ot"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bvd76e6u4y8jo" path="res://components/coin/coin.tscn" id="4_3hwp3"]
 [ext_resource type="PackedScene" uid="uid://bc4sgbj5vetsv" path="res://components/audio/music_button.tscn" id="4_sc1ii"]
 [ext_resource type="PackedScene" uid="uid://bf1r7j2wdhh0k" path="res://components/piggy/piggy.tscn" id="4_wqggr"]
+[ext_resource type="Theme" uid="uid://c7dkyme878fgs" path="res://components/button_theme.tres" id="4_x8s2f"]
 [ext_resource type="PackedScene" uid="uid://cmvf762ty44tn" path="res://components/score/score.tscn" id="5_enghu"]
 [ext_resource type="AudioStream" uid="uid://d33f88vtmpg2m" path="res://assets/sounds/progress_3.wav" id="5_kij4s"]
 [ext_resource type="Texture2D" uid="uid://cjodnq5kupikp" path="res://assets/images/brand/gray.png" id="9_71r0j"]
@@ -15,7 +16,7 @@
 [sub_resource type="GDScript" id="GDScript_0gluw"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_3ubq6"]
-font_size = 26
+font_size = 52
 
 [node name="PlayContainer" type="CanvasLayer"]
 script = ExtResource("1_e80q3")
@@ -30,16 +31,66 @@ one_shot = true
 one_shot = true
 
 [node name="SoundButton" parent="." instance=ExtResource("3_vnmnx")]
-offset_left = 303.0
-offset_top = 14.0
-offset_right = 365.0
-offset_bottom = 60.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -441.0
+offset_top = 43.0
+offset_right = -260.0
+offset_bottom = 177.0
+grow_horizontal = 0
+theme = ExtResource("4_x8s2f")
+theme_override_constants/icon_max_width = 50
+expand_icon = true
 
 [node name="MusicButton" parent="." instance=ExtResource("4_sc1ii")]
-offset_left = 388.0
-offset_top = 14.0
-offset_right = 450.0
-offset_bottom = 61.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -209.0
+offset_top = 43.0
+offset_right = -28.0
+offset_bottom = 178.0
+grow_horizontal = 0
+theme = ExtResource("4_x8s2f")
+theme_override_constants/icon_max_width = 50
+expand_icon = true
+
+[node name="RotationZone" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Coins" type="Control" parent="RotationZone"]
+anchors_preset = 0
+
+[node name="RightCoin" parent="RotationZone/Coins" instance=ExtResource("4_3hwp3")]
+position = Vector2(397, 69)
+scale = Vector2(1.6, 1.6)
+
+[node name="BottomCoin" parent="RotationZone/Coins" instance=ExtResource("4_3hwp3")]
+position = Vector2(40, 433)
+scale = Vector2(1.6, 1.6)
+
+[node name="LeftCoin" parent="RotationZone/Coins" instance=ExtResource("4_3hwp3")]
+position = Vector2(-323, 69)
+scale = Vector2(1.6, 1.6)
+
+[node name="TopCoin" parent="RotationZone/Coins" instance=ExtResource("4_3hwp3")]
+position = Vector2(40, -278)
+scale = Vector2(1.6, 1.6)
+
+[node name="Piggy" parent="RotationZone" instance=ExtResource("4_wqggr")]
+position = Vector2(38, 83)
 
 [node name="Sounds" type="Node" parent="."]
 
@@ -47,23 +98,11 @@ offset_bottom = 61.0
 stream = ExtResource("5_kij4s")
 bus = &"Music"
 
-[node name="Coins" type="Node" parent="."]
-
-[node name="RightCoin" parent="Coins" instance=ExtResource("4_3hwp3")]
-position = Vector2(382, 363)
-
-[node name="BottomCoin" parent="Coins" instance=ExtResource("4_3hwp3")]
-position = Vector2(250, 512)
-
-[node name="LeftCoin" parent="Coins" instance=ExtResource("4_3hwp3")]
-position = Vector2(112, 363)
-
-[node name="TopCoin" parent="Coins" instance=ExtResource("4_3hwp3")]
-position = Vector2(250, 236)
-
-[node name="Piggy" parent="." instance=ExtResource("4_wqggr")]
-
 [node name="Score" parent="." instance=ExtResource("5_enghu")]
+offset_left = 102.0
+offset_top = 51.0
+offset_right = 261.0
+offset_bottom = 183.0
 
 [node name="TutorialPanel" type="TextureRect" parent="."]
 visible = false
@@ -80,14 +119,15 @@ script = SubResource("GDScript_0gluw")
 
 [node name="Label" type="Label" parent="TutorialPanel"]
 layout_mode = 1
-anchors_preset = 14
+anchors_preset = 8
+anchor_left = 0.5
 anchor_top = 0.5
-anchor_right = 1.0
+anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 40.0
-offset_top = -89.0
-offset_right = -29.0
-offset_bottom = 90.0
+offset_left = -444.0
+offset_top = -360.0
+offset_right = 462.0
+offset_bottom = 420.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Your piggy will collect coins that match the coin color on its side.
@@ -100,9 +140,9 @@ autowrap_mode = 3
 
 [connection signal="timeout" from="StartGameTimer" to="." method="_on_start_game_timer_timeout"]
 [connection signal="timeout" from="EndGameTimer" to="." method="_on_end_game_timer_timeout"]
+[connection signal="body_entered" from="RotationZone/Coins/RightCoin" to="." method="_on_right_coin_body_entered"]
+[connection signal="body_entered" from="RotationZone/Coins/BottomCoin" to="." method="_on_bottom_coin_body_entered"]
+[connection signal="body_entered" from="RotationZone/Coins/LeftCoin" to="." method="_on_left_coin_body_entered"]
+[connection signal="body_entered" from="RotationZone/Coins/TopCoin" to="." method="_on_top_coin_body_entered"]
 [connection signal="finished" from="Sounds/Music1" to="." method="_on_music_1_finished"]
-[connection signal="body_entered" from="Coins/RightCoin" to="." method="_on_right_coin_body_entered"]
-[connection signal="body_entered" from="Coins/BottomCoin" to="." method="_on_bottom_coin_body_entered"]
-[connection signal="body_entered" from="Coins/LeftCoin" to="." method="_on_left_coin_body_entered"]
-[connection signal="body_entered" from="Coins/TopCoin" to="." method="_on_top_coin_body_entered"]
 [connection signal="gui_input" from="TutorialPanel" to="." method="_on_tutorial_panel_gui_input"]

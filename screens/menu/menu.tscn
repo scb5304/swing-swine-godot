@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://screens/menu/menu.gd" id="1_qt6qt"]
 [ext_resource type="PackedScene" uid="uid://bhpnlwtvs15ws" path="res://components/background/background.tscn" id="2_yi7g0"]
-[ext_resource type="Theme" uid="uid://c7dkyme878fgs" path="res://components/button_theme.tres" id="3_1jtb5"]
 [ext_resource type="Texture2D" uid="uid://cjccdsx8s0fgv" path="res://assets/images/brand/logo.png" id="3_7j48y"]
+[ext_resource type="Theme" uid="uid://c7dkyme878fgs" path="res://components/button_theme.tres" id="3_ifciu"]
 [ext_resource type="Texture2D" uid="uid://dgqmrmi6ixsdp" path="res://assets/images/game/piggy_plain.png" id="4_232b5"]
 [ext_resource type="Texture2D" uid="uid://bxoys2ixkxswq" path="res://assets/images/game/piggy_coin_count.png" id="5_54soc"]
 [ext_resource type="Texture2D" uid="uid://cdceit128dnlq" path="res://assets/images/icons/icon.svg" id="6_jtcqb"]
@@ -25,14 +25,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -218.0
-offset_top = -46.0
-offset_right = 218.0
-offset_bottom = 46.0
+offset_left = -429.0
+offset_top = 19.0
+offset_right = 443.0
+offset_bottom = 203.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("3_1jtb5")
-theme_override_font_sizes/font_size = 26
+theme = ExtResource("3_ifciu")
+theme_override_font_sizes/font_size = 45
 text = "Play"
 
 [node name="PiggyMarketButton" type="Button" parent="."]
@@ -41,14 +41,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -148.0
-offset_top = 209.0
-offset_right = 151.0
-offset_bottom = 270.0
+offset_left = -306.0
+offset_top = 533.0
+offset_right = 294.0
+offset_bottom = 643.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("3_1jtb5")
-theme_override_font_sizes/font_size = 26
+theme = ExtResource("3_ifciu")
+theme_override_font_sizes/font_size = 32
 text = "Piggy Market
 "
 icon = ExtResource("5_54soc")
@@ -60,42 +60,52 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -151.0
-offset_top = 110.0
-offset_right = 149.0
-offset_bottom = 165.0
+offset_left = -306.0
+offset_top = 328.0
+offset_right = 294.0
+offset_bottom = 438.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("3_1jtb5")
-theme_override_font_sizes/font_size = 26
+theme = ExtResource("3_ifciu")
+theme_override_font_sizes/font_size = 32
 text = "Options"
 icon = ExtResource("6_jtcqb")
 expand_icon = true
 
-[node name="Logo" type="Sprite2D" parent="."]
-position = Vector2(234, 140)
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Logo" type="Sprite2D" parent="Control"]
+position = Vector2(2, -480)
 rotation = -0.120428
-scale = Vector2(0.9, 0.9)
+scale = Vector2(2, 2)
 texture = ExtResource("3_7j48y")
 
-[node name="PiggyPlain" type="Area2D" parent="Logo"]
+[node name="PiggyPlain" type="Area2D" parent="Control/Logo"]
 position = Vector2(-193.289, 52.7162)
 script = ExtResource("7_cwepi")
 
-[node name="Sprite2D" type="Sprite2D" parent="Logo/PiggyPlain"]
+[node name="Sprite2D" type="Sprite2D" parent="Control/Logo/PiggyPlain"]
 position = Vector2(1.103, 0.13348)
 rotation = 0.16057
 scale = Vector2(0.666667, 0.666667)
 texture = ExtResource("4_232b5")
 offset = Vector2(0.000328064, 145)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Logo/PiggyPlain"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/Logo/PiggyPlain"]
 position = Vector2(-9.23129, 141.023)
 rotation = 0.16057
 scale = Vector2(0.666667, 0.666667)
 shape = SubResource("CapsuleShape2D_ll0xg")
 
-[node name="OinkSound" type="AudioStreamPlayer" parent="Logo/PiggyPlain"]
+[node name="OinkSound" type="AudioStreamPlayer" parent="Control/Logo/PiggyPlain"]
 stream = ExtResource("8_34u7h")
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_pressed"]

@@ -3,7 +3,7 @@ extends Button
 func display_item(item):
 	$Name.text = item["displayName"]
 	$Price.text = str(item["price"])
-	$Icon.texture = load("res://assets/images/accessories/" + item["name"] + ".png")
+	$IconWrapper/Icon.texture = load("res://assets/images/accessories/" + item["name"] + ".png")
 	$OwnedText.visible = false
 	$EquippedText.visible = false
 

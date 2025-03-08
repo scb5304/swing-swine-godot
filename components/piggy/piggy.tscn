@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dlapmfg675eno" path="res://assets/images/accessories/awardRibbon.png" id="7_qfd0d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oj5t8"]
-size = Vector2(73, 111)
+size = Vector2(190, 268)
 
 [node name="Piggy" type="CharacterBody2D"]
 position = Vector2(250, 371)
@@ -17,11 +17,11 @@ script = ExtResource("1_o4urt")
 
 [node name="PiggySprite" type="Sprite2D" parent="."]
 position = Vector2(0, -4.5)
-scale = Vector2(0.55, 0.55)
+scale = Vector2(1.5, 1.5)
 texture = ExtResource("2_n7l27")
 
 [node name="PiggyCollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-14.5, -137.5)
+position = Vector2(-46, -375)
 shape = SubResource("RectangleShape2D_oj5t8")
 
 [node name="PiggyFlipSound" type="AudioStreamPlayer" parent="."]
@@ -31,25 +31,23 @@ bus = &"SFX"
 [node name="EquipmentSlots" type="Sprite2D" parent="."]
 
 [node name="EyesSlot" type="Sprite2D" parent="EquipmentSlots"]
-position = Vector2(3.00002, -159)
+position = Vector2(11, -449)
 rotation = 1.42419
-scale = Vector2(0.650725, 0.525906)
 texture = ExtResource("4_t6j7o")
 
 [node name="HatSlot" type="Sprite2D" parent="EquipmentSlots"]
-position = Vector2(16, -159)
+position = Vector2(40, -427)
 rotation = 1.11701
-scale = Vector2(0.408, 0.429)
+scale = Vector2(0.85, 0.85)
 texture = ExtResource("4_7apvx")
 
 [node name="MustacheSlot" type="Sprite2D" parent="EquipmentSlots"]
-position = Vector2(-19, -176)
+position = Vector2(-56, -479)
 rotation = -1.72788
-scale = Vector2(0.575465, 0.491033)
 texture = ExtResource("6_gpyi3")
 
 [node name="ChestawardSlot" type="Sprite2D" parent="EquipmentSlots"]
-position = Vector2(-31, -153)
+position = Vector2(-77, -419)
 rotation = 1.31074
-scale = Vector2(0.201, 0.2)
+scale = Vector2(0.4, 0.4)
 texture = ExtResource("7_qfd0d")
