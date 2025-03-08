@@ -1,5 +1,7 @@
 # Godot 4+ specific ignores
 .godot/
-android/*
+/android/
+assets/basic_gui_bundle
+assets/kaph_font
 *.apk
 *.bat
