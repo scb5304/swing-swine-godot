@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bhpnlwtvs15ws"]
 
-[ext_resource type="Texture2D" uid="uid://dw84oyssktx57" path="res://assets/images/brand/backdrop_sky.jpg" id="1_tyeyf"]
+[ext_resource type="Texture2D" uid="uid://d2w5dokxfchrh" path="res://assets/images/brand/backdrop_sky_2.jpg" id="1_wtjkt"]
 
 [node name="Background" type="TextureRect"]
 anchors_preset = 15
@@ -8,5 +8,5 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_tyeyf")
+texture = ExtResource("1_wtjkt")
 expand_mode = 5

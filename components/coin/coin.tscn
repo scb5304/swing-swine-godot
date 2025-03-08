@@ -7,7 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://titrfyqa08il" path="res://assets/sounds/coin_arrow.mp3" id="5_cpoij"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nnu0v"]
-radius = 25.5797
+radius = 27.7778
 
 [node name="Coin" type="Area2D"]
 scale = Vector2(0.9, 0.9)

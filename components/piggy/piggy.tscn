@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dlapmfg675eno" path="res://assets/images/accessories/awardRibbon.png" id="7_qfd0d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oj5t8"]
-size = Vector2(190, 268)
+size = Vector2(192, 268)
 
 [node name="Piggy" type="CharacterBody2D"]
 position = Vector2(250, 371)
@@ -21,7 +21,7 @@ scale = Vector2(1.5, 1.5)
 texture = ExtResource("2_n7l27")
 
 [node name="PiggyCollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-46, -375)
+position = Vector2(-45, -375)
 shape = SubResource("RectangleShape2D_oj5t8")
 
 [node name="PiggyFlipSound" type="AudioStreamPlayer" parent="."]

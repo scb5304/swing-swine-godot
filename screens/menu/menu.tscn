@@ -1,14 +1,18 @@
-[gd_scene load_steps=11 format=3 uid="uid://2gtmr6l7vjbf"]
+[gd_scene load_steps=13 format=3 uid="uid://2gtmr6l7vjbf"]
 
 [ext_resource type="Script" path="res://screens/menu/menu.gd" id="1_qt6qt"]
 [ext_resource type="PackedScene" uid="uid://bhpnlwtvs15ws" path="res://components/background/background.tscn" id="2_yi7g0"]
-[ext_resource type="Texture2D" uid="uid://cjccdsx8s0fgv" path="res://assets/images/brand/logo.png" id="3_7j48y"]
-[ext_resource type="Theme" uid="uid://c7dkyme878fgs" path="res://components/button_theme.tres" id="3_ifciu"]
+[ext_resource type="PackedScene" uid="uid://dpswdvhvedmmg" path="res://components/menu-button/menu_button_2.tscn" id="3_pvieo"]
+[ext_resource type="Texture2D" uid="uid://c07o0du3174l8" path="res://assets/basic_gui_bundle/Icons/Icon_Small_Blank_Arrow.png" id="4_68j1f"]
 [ext_resource type="Texture2D" uid="uid://dgqmrmi6ixsdp" path="res://assets/images/game/piggy_plain.png" id="4_232b5"]
-[ext_resource type="Texture2D" uid="uid://bxoys2ixkxswq" path="res://assets/images/game/piggy_coin_count.png" id="5_54soc"]
+[ext_resource type="Texture2D" uid="uid://dkgw8selx4pkw" path="res://assets/basic_gui_bundle/Icons/Icon_Small_Coin.png" id="5_k2cee"]
 [ext_resource type="Texture2D" uid="uid://cdceit128dnlq" path="res://assets/images/icons/icon.svg" id="6_jtcqb"]
+[ext_resource type="Texture2D" uid="uid://cnujemd5stw52" path="res://assets/images/brand/swing_swine_logo_3_2.png" id="6_w6epw"]
 [ext_resource type="Script" path="res://screens/menu/piggy_plain.gd" id="7_cwepi"]
 [ext_resource type="AudioStream" uid="uid://dbc0b5uw3f4mr" path="res://assets/sounds/piggy_oink.mp3" id="8_34u7h"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_q5yem"]
+font_size = 42
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ll0xg"]
 radius = 53.2904
@@ -19,60 +23,49 @@ script = ExtResource("1_qt6qt")
 
 [node name="Background" parent="." instance=ExtResource("2_yi7g0")]
 
-[node name="PlayButton" type="Button" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -429.0
-offset_top = 19.0
-offset_right = 443.0
-offset_bottom = 203.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = ExtResource("3_ifciu")
-theme_override_font_sizes/font_size = 45
-text = "Play"
+[node name="PlayButton" parent="." instance=ExtResource("3_pvieo")]
+text = "PLAY"
+icon = ExtResource("4_68j1f")
 
-[node name="PiggyMarketButton" type="Button" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -306.0
-offset_top = 533.0
-offset_right = 294.0
-offset_bottom = 643.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = ExtResource("3_ifciu")
-theme_override_font_sizes/font_size = 32
-text = "Piggy Market
-"
-icon = ExtResource("5_54soc")
-expand_icon = true
+[node name="MarketButton" parent="." instance=ExtResource("3_pvieo")]
+offset_left = -426.0
+offset_top = 345.0
+offset_right = 446.0
+offset_bottom = 605.0
+text = " MARKET"
+icon = ExtResource("5_k2cee")
 
-[node name="OptionsButton" type="Button" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -306.0
-offset_top = 328.0
-offset_right = 294.0
-offset_bottom = 438.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = ExtResource("3_ifciu")
-theme_override_font_sizes/font_size = 32
-text = "Options"
-icon = ExtResource("6_jtcqb")
-expand_icon = true
+[node name="SettingsButton" type="Button" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -497.0
+offset_top = -206.0
+offset_right = -107.0
+offset_bottom = -35.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 48
 
-[node name="Control" type="Control" parent="."]
+[node name="Icon" type="Sprite2D" parent="SettingsButton"]
+position = Vector2(75, 86)
+scale = Vector2(0.859375, 0.835938)
+texture = ExtResource("6_jtcqb")
+
+[node name="Text" type="Label" parent="SettingsButton"]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 37.0
+offset_right = 372.0
+offset_bottom = 136.0
+text = "Settings"
+label_settings = SubResource("LabelSettings_q5yem")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LogoWrapper" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -82,32 +75,32 @@ anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Logo" type="Sprite2D" parent="Control"]
+[node name="Logo" type="Sprite2D" parent="LogoWrapper"]
 position = Vector2(2, -480)
 rotation = -0.120428
 scale = Vector2(2, 2)
-texture = ExtResource("3_7j48y")
+texture = ExtResource("6_w6epw")
 
-[node name="PiggyPlain" type="Area2D" parent="Control/Logo"]
-position = Vector2(-193.289, 52.7162)
+[node name="PiggyPlain" type="Area2D" parent="LogoWrapper/Logo"]
+position = Vector2(-217.628, 29.5688)
 script = ExtResource("7_cwepi")
 
-[node name="Sprite2D" type="Sprite2D" parent="Control/Logo/PiggyPlain"]
+[node name="Sprite2D" type="Sprite2D" parent="LogoWrapper/Logo/PiggyPlain"]
 position = Vector2(1.103, 0.13348)
 rotation = 0.16057
 scale = Vector2(0.666667, 0.666667)
 texture = ExtResource("4_232b5")
 offset = Vector2(0.000328064, 145)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/Logo/PiggyPlain"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LogoWrapper/Logo/PiggyPlain"]
 position = Vector2(-9.23129, 141.023)
 rotation = 0.16057
 scale = Vector2(0.666667, 0.666667)
 shape = SubResource("CapsuleShape2D_ll0xg")
 
-[node name="OinkSound" type="AudioStreamPlayer" parent="Control/Logo/PiggyPlain"]
+[node name="OinkSound" type="AudioStreamPlayer" parent="LogoWrapper/Logo/PiggyPlain"]
 stream = ExtResource("8_34u7h")
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="PiggyMarketButton" to="." method="_on_piggy_market_button_pressed"]
-[connection signal="pressed" from="OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="MarketButton" to="." method="_on_piggy_market_button_pressed"]
+[connection signal="pressed" from="SettingsButton" to="." method="_on_options_button_pressed"]

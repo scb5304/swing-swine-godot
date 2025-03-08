@@ -1,0 +1,88 @@
+[gd_scene load_steps=9 format=3 uid="uid://dpswdvhvedmmg"]
+
+[ext_resource type="Texture2D" uid="uid://1ejii8antqwo" path="res://assets/images/brand/pink.png" id="2_h0mx5"]
+[ext_resource type="Texture2D" uid="uid://dnxqhwlp1scyb" path="res://assets/images/brand/pink_2.png" id="2_vvcw5"]
+[ext_resource type="FontFile" uid="uid://bkdvgausjm4tk" path="res://assets/fonts/bad_comic_font/OpenType (.otf)/BadComic-Regular.otf" id="4_ke8u8"]
+[ext_resource type="Texture2D" uid="uid://codoskdgkra7f" path="res://assets/basic_gui_bundle/Icons/Icon_Large_Star_SeethroughOutline.png" id="4_p5moh"]
+[ext_resource type="Script" path="res://components/menu-button/menu_button_2.gd" id="4_x28f7"]
+
+[sub_resource type="Theme" id="Theme_2gdd3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_akkcg"]
+font = ExtResource("4_ke8u8")
+font_size = 120
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ebxeu"]
+font = ExtResource("4_ke8u8")
+font_size = 120
+
+[node name="MenuButton" type="TextureButton"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -429.0
+offset_top = 19.0
+offset_right = 443.0
+offset_bottom = 279.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_2gdd3")
+texture_normal = ExtResource("2_h0mx5")
+texture_pressed = ExtResource("2_vvcw5")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("4_x28f7")
+
+[node name="IconWrapper" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 104.0
+offset_top = 6.0
+offset_right = 144.0
+offset_bottom = 46.0
+grow_vertical = 2
+
+[node name="Icon" type="Sprite2D" parent="IconWrapper"]
+position = Vector2(2, 0)
+scale = Vector2(0.43, 0.43)
+texture = ExtResource("4_p5moh")
+
+[node name="ButtonText" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -435.0
+offset_top = -50.0
+offset_right = 435.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextBack" type="Label" parent="ButtonText"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = -16.0
+offset_right = 878.0
+offset_bottom = 129.0
+text = "PLAY"
+label_settings = SubResource("LabelSettings_akkcg")
+horizontal_alignment = 1
+
+[node name="TextFore" type="Label" parent="ButtonText"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = -18.0
+offset_right = 874.0
+offset_bottom = 127.0
+text = "PLAY"
+label_settings = SubResource("LabelSettings_ebxeu")
+horizontal_alignment = 1

@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://components/score/score.gd" id="1_fknq6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_lrqgu"]
-font_size = 96
+font_size = 118
 
 [node name="Score" type="Label"]
 offset_left = 49.0
