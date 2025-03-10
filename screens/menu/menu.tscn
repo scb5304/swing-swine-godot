@@ -24,7 +24,7 @@ script = ExtResource("1_qt6qt")
 [node name="Background" parent="." instance=ExtResource("2_yi7g0")]
 
 [node name="PlayButton" parent="." instance=ExtResource("3_pvieo")]
-text = "PLAY"
+text = "play"
 icon = ExtResource("4_68j1f")
 
 [node name="MarketButton" parent="." instance=ExtResource("3_pvieo")]
@@ -32,7 +32,7 @@ offset_left = -426.0
 offset_top = 345.0
 offset_right = 446.0
 offset_bottom = 605.0
-text = " MARKET"
+text = "market"
 icon = ExtResource("5_k2cee")
 
 [node name="SettingsButton" type="Button" parent="."]

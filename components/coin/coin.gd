@@ -11,7 +11,7 @@ const COIN_MOD_ULTRA = "ULTRA"
 const COIN_ODDS_FLIP = 14
 
 # Disable for now, needs to be a "bonus" score or something, too cheesy
-const COIN_ODDS_ULTRA = 500
+const COIN_ODDS_ULTRA = 1000
 
 var type: String
 var color : String

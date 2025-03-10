@@ -9,19 +9,20 @@ func score(coin: Coin, score):
 	scoreHorizontalPush = 0
 	
 	if (coin.mod == Coin.COIN_MOD_ULTRA):
-		scoreVerticalPush = 13
-		scoreHorizontalPush = 5
+		scoreVerticalPush = 30
+		scoreHorizontalPush = 21
 	elif score >= 200:
-		scoreVerticalPush = 13
+		scoreVerticalPush = 30
 	elif score >= 100:
-		scoreVerticalPush = 7
+		scoreVerticalPush = 23
 	elif score >= 50:
-		scoreVerticalPush = 5
+		scoreVerticalPush = 18
 	elif score >= 25:
-		scoreVerticalPush = 3
+		scoreVerticalPush = 15
 	else:
-		scoreVerticalPush = 2
+		scoreVerticalPush = 10
 
+	print(scoreVerticalPush)
 	global_position.y -= scoreVerticalPush
 	global_position.x -= scoreHorizontalPush
 	$Timer.start()

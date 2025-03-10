@@ -4,6 +4,6 @@ extends TextureButton
 @export var icon: Texture2D
 
 func _ready():
-	$ButtonText/TextBack.text = text
-	$ButtonText/TextFore.text = text
+	$TextBack.text = text
+	$TextFore.text = text
 	$IconWrapper/Icon.texture = icon

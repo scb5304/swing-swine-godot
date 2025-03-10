@@ -7,7 +7,7 @@
 [ext_resource type="Theme" uid="uid://c7dkyme878fgs" path="res://components/button_theme.tres" id="5_pmefa"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_y2vqn"]
-font_size = 50
+font_size = 64
 
 [node name="PiggyMarketContainer" type="CanvasLayer"]
 script = ExtResource("1_5gs6b")
@@ -17,7 +17,7 @@ script = ExtResource("1_5gs6b")
 [node name="Label" type="Label" parent="."]
 offset_left = 56.0
 offset_top = 62.0
-offset_right = 787.0
+offset_right = 775.0
 offset_bottom = 303.0
 text = "This little piggy went to market..."
 label_settings = SubResource("LabelSettings_y2vqn")
