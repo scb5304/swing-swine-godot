@@ -65,5 +65,10 @@ func _unequip_items_in_slot(slot):
 		if game_data_item.slot == slot:
 			game_data_item["equipped"] = false
 
+func _on_unequip_all_pressed():
+	for game_data_item in GameData.items:
+		game_data_item["equipped"] = false
+	_load_shop_items()
+
 func _on_main_menu_button_pressed():
 	get_tree().change_scene_to_file("res://screens/menu/menu.tscn")

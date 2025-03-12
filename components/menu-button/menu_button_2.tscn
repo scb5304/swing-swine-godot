@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://dpswdvhvedmmg"]
 
-[ext_resource type="Texture2D" uid="uid://1ejii8antqwo" path="res://assets/images/brand/pink.png" id="2_h0mx5"]
+[ext_resource type="Texture2D" uid="uid://g26jgc4d0l8s" path="res://assets/images/brand/pink_4.png" id="1_jydbo"]
 [ext_resource type="Texture2D" uid="uid://dnxqhwlp1scyb" path="res://assets/images/brand/pink_2.png" id="2_vvcw5"]
 [ext_resource type="FontFile" uid="uid://bkdvgausjm4tk" path="res://assets/fonts/bad_comic_font/OpenType (.otf)/BadComic-Regular.otf" id="4_ke8u8"]
 [ext_resource type="Texture2D" uid="uid://codoskdgkra7f" path="res://assets/basic_gui_bundle/Icons/Icon_Large_Star_SeethroughOutline.png" id="4_p5moh"]
@@ -30,7 +30,7 @@ offset_bottom = 279.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_2gdd3")
-texture_normal = ExtResource("2_h0mx5")
+texture_normal = ExtResource("1_jydbo")
 texture_pressed = ExtResource("2_vvcw5")
 ignore_texture_size = true
 stretch_mode = 0

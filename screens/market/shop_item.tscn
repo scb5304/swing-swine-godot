@@ -1,24 +1,32 @@
-[gd_scene load_steps=7 format=3 uid="uid://b3x5h1144wgjd"]
+[gd_scene load_steps=10 format=3 uid="uid://b3x5h1144wgjd"]
 
 [ext_resource type="Script" path="res://screens/market/shop_item.gd" id="1_64t37"]
 [ext_resource type="Texture2D" uid="uid://g6xokcg7ohdb" path="res://assets/images/accessories/shades.png" id="2_47dvm"]
+[ext_resource type="Texture2D" uid="uid://chrt8130d2f4f" path="res://assets/basic_gui_bundle/ButtonsText/SVG/ButtonText_Blank_TextInput.svg" id="2_pvwu8"]
+[ext_resource type="FontFile" uid="uid://6vlwn6vehsit" path="res://assets/fonts/bad_comic_font/TrueType (.ttf)/BadComic-Italic.ttf" id="4_wxug0"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_tr3ld"]
+[sub_resource type="LabelSettings" id="LabelSettings_banju"]
 font_size = 47
+font_color = Color(0, 0, 0, 1)
 outline_size = 1
 outline_color = Color(1, 0.117647, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_tr3ld"]
+font_size = 53
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_ke5ks"]
 font_size = 42
 
 [sub_resource type="LabelSettings" id="LabelSettings_ji1bk"]
+font = ExtResource("4_wxug0")
 font_size = 30
-font_color = Color(0.941176, 0.470588, 1, 0.584314)
 outline_color = Color(0.443137, 1, 1, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_bqtgx"]
+font = ExtResource("4_wxug0")
 font_size = 30
-font_color = Color(1, 0.219608, 1, 1)
 
 [node name="ShopItem" type="Button"]
 custom_minimum_size = Vector2(0, 150)
@@ -27,7 +35,62 @@ offset_bottom = 175.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 mouse_filter = 1
+flat = true
 script = ExtResource("1_64t37")
+
+[node name="BackgroundNormal" type="TextureRect" parent="."]
+modulate = Color(1, 0.7, 0.975, 0.729412)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_pvwu8")
+expand_mode = 1
+
+[node name="BackgroundOwned" type="TextureRect" parent="."]
+visible = false
+modulate = Color(1, 0.7, 0.975, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_pvwu8")
+expand_mode = 1
+
+[node name="BackgroundEquipped" type="TextureRect" parent="."]
+visible = false
+modulate = Color(0.384, 0.5952, 0.96, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_pvwu8")
+expand_mode = 1
+
+[node name="Name2" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -552.0
+offset_top = -93.5
+offset_right = -45.0
+offset_bottom = 81.5
+grow_horizontal = 0
+grow_vertical = 2
+text = "Convincing Mustache"
+label_settings = SubResource("LabelSettings_banju")
+vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="Name" type="Label" parent="."]
 layout_mode = 1
@@ -36,10 +99,10 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -554.0
-offset_top = -87.5
-offset_right = -47.0
-offset_bottom = 87.5
+offset_left = -585.0
+offset_top = -95.5
+offset_right = -41.0
+offset_bottom = 79.5
 grow_horizontal = 0
 grow_vertical = 2
 text = "Convincing Mustache"
@@ -74,31 +137,37 @@ grow_vertical = 2
 
 [node name="Icon" type="Sprite2D" parent="IconWrapper"]
 position = Vector2(30, 24)
-scale = Vector2(1.25, 1.25)
+scale = Vector2(1.75, 1.75)
 texture = ExtResource("2_47dvm")
 
 [node name="OwnedText" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 108.0
-offset_top = -41.0
-offset_right = 222.0
-offset_bottom = 1.0
-grow_vertical = 0
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -552.0
+offset_top = 17.5
+offset_right = -438.0
+offset_bottom = 59.5
+grow_horizontal = 0
+grow_vertical = 2
 text = "OWNED"
 label_settings = SubResource("LabelSettings_ji1bk")
 
 [node name="EquippedText" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 89.0
-offset_top = -40.0
-offset_right = 236.0
-offset_bottom = 2.0
-grow_vertical = 0
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -553.0
+offset_top = 15.5
+offset_right = -406.0
+offset_bottom = 57.5
+grow_horizontal = 0
+grow_vertical = 2
 text = "EQUIPPED"
 label_settings = SubResource("LabelSettings_bqtgx")

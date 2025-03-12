@@ -15,7 +15,7 @@ func _ready():
 			_equip(item)
 
 func _equip(item):
-	var texture_path = "res://assets/images/accessories/" + item.name + ".png"
+	var texture_path = "res://assets/images/game/accessories/" + item.name + ".png"
 	var texture = load(texture_path)
 
 	if equipment_slots.has(item.slot):

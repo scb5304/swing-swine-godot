@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://components/piggy/piggy.gd" id="1_o4urt"]
 [ext_resource type="Texture2D" uid="uid://d3p8w13n2bvdh" path="res://assets/images/game/piggy_silver_double.png" id="2_n7l27"]
 [ext_resource type="AudioStream" uid="uid://chtjs54f57w21" path="res://assets/sounds/piggy_flip.mp3" id="3_xvfmu"]
-[ext_resource type="Texture2D" uid="uid://dvapos0jau7c1" path="res://assets/images/accessories/ufoHat.png" id="4_7apvx"]
 [ext_resource type="Texture2D" uid="uid://g6xokcg7ohdb" path="res://assets/images/accessories/shades.png" id="4_t6j7o"]
+[ext_resource type="Texture2D" uid="uid://dlv3yv10qr57l" path="res://assets/images/accessories/witchHat.png" id="5_ja1vy"]
 [ext_resource type="Texture2D" uid="uid://d3uvmdjncstsf" path="res://assets/images/accessories/convincingMustache.png" id="6_gpyi3"]
 [ext_resource type="Texture2D" uid="uid://dlapmfg675eno" path="res://assets/images/accessories/awardRibbon.png" id="7_qfd0d"]
 
@@ -31,15 +31,16 @@ bus = &"SFX"
 [node name="EquipmentSlots" type="Sprite2D" parent="."]
 
 [node name="EyesSlot" type="Sprite2D" parent="EquipmentSlots"]
-position = Vector2(11, -449)
+position = Vector2(10, -442)
 rotation = 1.42419
+scale = Vector2(1.4, 1.4)
 texture = ExtResource("4_t6j7o")
 
 [node name="HatSlot" type="Sprite2D" parent="EquipmentSlots"]
-position = Vector2(40, -427)
+position = Vector2(48, -421)
 rotation = 1.11701
 scale = Vector2(0.85, 0.85)
-texture = ExtResource("4_7apvx")
+texture = ExtResource("5_ja1vy")
 
 [node name="MustacheSlot" type="Sprite2D" parent="EquipmentSlots"]
 position = Vector2(-56, -479)
