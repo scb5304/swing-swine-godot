@@ -5,6 +5,7 @@ func _ready():
 
 func _on_sound_button_pressed():
 	GameData.setting_sound_effects_enabled = !GameData.setting_sound_effects_enabled
+	GameData.save_game()
 	GameData.init_audio_bus()
 	_init_icon()
 

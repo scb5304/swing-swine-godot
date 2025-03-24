@@ -5,6 +5,7 @@ func _ready():
 
 func _on_music_button_pressed():
 	GameData.setting_music_enabled = !GameData.setting_music_enabled
+	GameData.save_game()
 	GameData.init_audio_bus()
 	_init_icon()
 
