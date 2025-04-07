@@ -1,11 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://dk05btb5p48wl"]
+[gd_scene load_steps=8 format=3 uid="uid://dk05btb5p48wl"]
 
 [ext_resource type="Script" path="res://screens/market/piggy_market.gd" id="1_5gs6b"]
 [ext_resource type="PackedScene" uid="uid://bhpnlwtvs15ws" path="res://components/background/background.tscn" id="2_sx3vk"]
 [ext_resource type="PackedScene" uid="uid://dp2cu3b6eoq44" path="res://components/piggycoincount/piggy_coin_count.tscn" id="3_8a8st"]
 [ext_resource type="AudioStream" uid="uid://d3rm3kc68xnxn" path="res://assets/sounds/cha_ching.mp3" id="4_18lm0"]
 [ext_resource type="Theme" uid="uid://c7dkyme878fgs" path="res://components/button_theme.tres" id="5_pmefa"]
-[ext_resource type="Texture2D" uid="uid://va5obl2npcac" path="res://assets/shop4x.png" id="6_4r0va"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_y2vqn"]
 font_size = 62
@@ -28,11 +27,6 @@ label_settings = SubResource("LabelSettings_y2vqn")
 autowrap_mode = 3
 
 [node name="PiggyCoinCount" parent="." instance=ExtResource("3_8a8st")]
-
-[node name="Shop4x" type="Sprite2D" parent="PiggyCoinCount"]
-position = Vector2(-8.39612, 377.683)
-scale = Vector2(1.39935, 1.38854)
-texture = ExtResource("6_4r0va")
 
 [node name="PurchaseSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_18lm0")
@@ -65,7 +59,7 @@ offset_bottom = -57.0
 grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("5_pmefa")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 40
 text = "Main Menu"
 
 [node name="PurchaseDialog" type="ConfirmationDialog" parent="."]
