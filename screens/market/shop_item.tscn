@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://b3x5h1144wgjd"]
 
 [ext_resource type="Script" path="res://screens/market/shop_item.gd" id="1_64t37"]
-[ext_resource type="Texture2D" uid="uid://g6xokcg7ohdb" path="res://assets/images/accessories/shades.png" id="2_47dvm"]
+[ext_resource type="Texture2D" uid="uid://jqhifh8cgbft" path="res://assets/images/accessories/shades.png" id="2_47dvm"]
 [ext_resource type="Texture2D" uid="uid://chrt8130d2f4f" path="res://assets/basic_gui_bundle/ButtonsText/SVG/ButtonText_Blank_TextInput.svg" id="2_pvwu8"]
 [ext_resource type="FontFile" uid="uid://6vlwn6vehsit" path="res://assets/fonts/bad_comic_font/TrueType (.ttf)/BadComic-Italic.ttf" id="4_wxug0"]
 
@@ -39,7 +39,7 @@ flat = true
 script = ExtResource("1_64t37")
 
 [node name="BackgroundNormal" type="TextureRect" parent="."]
-modulate = Color(1, 0.7, 0.975, 0.729412)
+modulate = Color(0.66, 0.66, 0.66, 0.729412)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -51,7 +51,7 @@ expand_mode = 1
 
 [node name="BackgroundOwned" type="TextureRect" parent="."]
 visible = false
-modulate = Color(1, 0.7, 0.975, 1)
+modulate = Color(1, 0.7, 0.975, 0.658824)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -63,7 +63,7 @@ expand_mode = 1
 
 [node name="BackgroundEquipped" type="TextureRect" parent="."]
 visible = false
-modulate = Color(0.384, 0.5952, 0.96, 1)
+modulate = Color(0.96, 0.384, 0.6336, 1)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
