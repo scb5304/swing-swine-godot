@@ -17,7 +17,9 @@ outline_size = 4
 outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_ke5ks"]
-font_size = 42
+font_size = 47
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_ji1bk"]
 font = ExtResource("4_wxug0")
@@ -157,6 +159,7 @@ text = "OWNED"
 label_settings = SubResource("LabelSettings_ji1bk")
 
 [node name="EquippedText" type="Label" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
