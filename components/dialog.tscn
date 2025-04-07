@@ -1,91 +1,116 @@
 [gd_scene load_steps=8 format=3 uid="uid://b5uv7u2kbliqw"]
 
-[ext_resource type="Texture2D" uid="uid://cjodnq5kupikp" path="res://assets/images/brand/gray.png" id="1_60wlq"]
+[ext_resource type="Script" path="res://components/dialog.gd" id="1_so1k3"]
+[ext_resource type="Texture2D" uid="uid://c6cxsmjbtf5k8" path="res://assets/images/brand/white.png" id="2_g8ekw"]
 [ext_resource type="Texture2D" uid="uid://cqect6myx86dj" path="res://assets/basic_gui_bundle/Icons/SVG/Icon_Small_Coin.svg" id="2_sxpg5"]
 
 [sub_resource type="Theme" id="Theme_0ow2e"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hucyd"]
-texture = ExtResource("1_60wlq")
+texture = ExtResource("2_g8ekw")
+modulate_color = Color(0.91, 0.91, 0.91, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_dicdl"]
-font_size = 22
-outline_size = 1
+font_size = 46
+font_color = Color(0.19, 0.19, 0.19, 0.721569)
 outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_rcsvo"]
-font_size = 27
-outline_size = 2
+font_size = 54
+font_color = Color(0.05, 0.05, 0.05, 0.721569)
 outline_color = Color(0, 0, 0, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_1mma1"]
-font_size = 20
-font_color = Color(1, 0.741176, 1, 1)
-outline_size = 1
-outline_color = Color(0, 0, 0, 1)
+[node name="SteveDialog" type="Window"]
+initial_position = 1
+size = Vector2i(800, 600)
+unresizable = true
+borderless = true
+always_on_top = true
+popup_window = true
+force_native = true
+content_scale_mode = 1
+script = ExtResource("1_so1k3")
 
-[node name="SteveDialog" type="Control"]
-layout_mode = 3
+[node name="Panel" type="Panel" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="Panel" type="Panel" parent="."]
-offset_left = 1.0
-offset_top = -1.0
-offset_right = 364.0
-offset_bottom = 225.0
 theme = SubResource("Theme_0ow2e")
 theme_override_styles/panel = SubResource("StyleBoxTexture_hucyd")
 
 [node name="Icon" type="Sprite2D" parent="Panel"]
-position = Vector2(31.625, 30.375)
-scale = Vector2(0.281447, 0.272013)
+position = Vector2(67.32, 64.235)
+scale = Vector2(0.506, 0.49)
 texture = ExtResource("2_sxpg5")
 
 [node name="Title" type="Label" parent="Panel"]
-layout_mode = 0
-offset_left = 2.0
-offset_top = 98.0
-offset_right = 365.0
-offset_bottom = 130.0
-text = "Purchase UFO Hat for 20 coins?"
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 29.785
+offset_bottom = 90.785
+grow_horizontal = 2
+text = "confirmation"
 label_settings = SubResource("LabelSettings_dicdl")
 horizontal_alignment = 1
 autowrap_mode = 3
 
 [node name="Message" type="Label" parent="Panel"]
-layout_mode = 0
-offset_left = 60.0
-offset_top = 14.0
-offset_right = 339.0
-offset_bottom = 48.0
-text = "Confirmation"
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -67.5
+offset_bottom = 67.5
+grow_horizontal = 2
+grow_vertical = 2
+text = " purchase UFO Hat for 20 coins? "
 label_settings = SubResource("LabelSettings_rcsvo")
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="NegativeButton" type="Label" parent="Panel"]
-layout_mode = 0
-offset_left = 138.0
-offset_top = 188.0
-offset_right = 247.0
-offset_bottom = 222.0
+[node name="NegativeButton" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -439.165
+offset_top = -123.875
+offset_right = -239.165
+offset_bottom = 1.125
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_hover_color = Color(1, 0.36, 1, 1)
+theme_override_colors/font_color = Color(1, 0.36, 1, 1)
+theme_override_font_sizes/font_size = 45
 text = "CANCEL"
-label_settings = SubResource("LabelSettings_1mma1")
-horizontal_alignment = 1
+flat = true
 autowrap_mode = 3
 
-[node name="PositiveButton" type="Label" parent="Panel"]
-layout_mode = 0
-offset_left = 253.0
-offset_top = 187.0
-offset_right = 362.0
-offset_bottom = 221.0
-text = "OK
-"
-label_settings = SubResource("LabelSettings_1mma1")
-horizontal_alignment = 1
+[node name="PositiveButton" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -206.27
+offset_top = -123.95
+offset_right = -6.27002
+offset_bottom = 1.04993
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_hover_color = Color(1, 0.36, 1, 1)
+theme_override_colors/font_color = Color(1, 0.36, 1, 1)
+theme_override_font_sizes/font_size = 45
+text = "OK"
+flat = true
 autowrap_mode = 3
+
+[connection signal="pressed" from="Panel/NegativeButton" to="." method="_on_negative_button_pressed"]
+[connection signal="pressed" from="Panel/PositiveButton" to="." method="_on_positive_button_pressed"]

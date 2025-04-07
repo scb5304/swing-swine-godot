@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dk05btb5p48wl"]
+[gd_scene load_steps=8 format=3 uid="uid://dk05btb5p48wl"]
 
 [ext_resource type="Script" path="res://screens/market/piggy_market.gd" id="1_5gs6b"]
 [ext_resource type="PackedScene" uid="uid://bhpnlwtvs15ws" path="res://components/background/background.tscn" id="2_sx3vk"]
@@ -6,7 +6,6 @@
 [ext_resource type="AudioStream" uid="uid://d3rm3kc68xnxn" path="res://assets/sounds/cha_ching.mp3" id="4_18lm0"]
 [ext_resource type="Theme" uid="uid://c7dkyme878fgs" path="res://components/button_theme.tres" id="5_pmefa"]
 [ext_resource type="PackedScene" uid="uid://b5uv7u2kbliqw" path="res://components/dialog.tscn" id="6_bqg2t"]
-[ext_resource type="Texture2D" uid="uid://cjodnq5kupikp" path="res://assets/images/brand/gray.png" id="6_n2k8l"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_y2vqn"]
 font_size = 62
@@ -69,24 +68,9 @@ offset_bottom = 348.0
 theme_override_font_sizes/font_size = 35
 text = "Unequip All"
 
-[node name="DialogBackground" type="TextureRect" parent="."]
-visible = false
-modulate = Color(0.24, 0.24, 0.24, 0.486275)
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -3.0
-offset_right = -3.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("6_n2k8l")
-
 [node name="SteveDialog" parent="." instance=ExtResource("6_bqg2t")]
-wrap_controls = true
-exclusive = true
 force_native = false
 
 [connection signal="pressed" from="MainMenuButton" to="." method="_on_main_menu_button_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_unequip_all_pressed"]
-[connection signal="negative_button_clicked" from="SteveDialog" to="." method="_on_steve_dialog_negative_button_clicked"]
 [connection signal="positive_button_clicked" from="SteveDialog" to="." method="on_purchase_dialog_confirmed"]
