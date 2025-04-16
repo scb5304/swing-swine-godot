@@ -40,10 +40,6 @@ func _ready():
 		$NiceText.text = "wow!"
 		$YouGotText.text = "You got " + scoreStr + " coins!!"
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
 func _on_play_again_button_pressed():
 	get_tree().change_scene_to_file("res://screens/play/play.tscn")
 

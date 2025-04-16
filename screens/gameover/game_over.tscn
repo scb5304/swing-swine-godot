@@ -85,4 +85,5 @@ text = "home"
 stream = ExtResource("5_a3xye")
 bus = &"SFX"
 
+[connection signal="pressed" from="PiggyCoinCount" to="." method="_on_piggy_coin_count_pressed"]
 [connection signal="pressed" from="MainMenuButton" to="." method="_on_main_menu_button_pressed"]
