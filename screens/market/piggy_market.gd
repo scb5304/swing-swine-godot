@@ -1,14 +1,12 @@
 extends CanvasLayer
 
 const ShopItemScene = preload("res://screens/market/shop_item.tscn")
+const DialogScene = preload("res://components/dialog.tscn")
 
 @onready var items_container = $ScrollContainer/VBoxContainer
 
-var pending_purchase_item
-
 func _ready():
 	GameData.money_total = 10000
-	$SteveDialog.visible = false
 	_display_money_total()
 	_load_shop_items()
 	
@@ -41,14 +39,19 @@ func _on_owned_item_selected(item):
 func _confirm_buy_item(shop_item_scene, item):
 	var price: int = item["price"]
 	if price <= GameData.money_total:
-		self.pending_purchase_item = item
-		$SteveDialog.popup_centered()
-		$SteveDialog/Panel/Message.text = " purchase " + item.displayName + " for " + str(item.price) + " coins? "
-		$DialogBackground.visible = true
+		_show_purchase_confirmation(item)
 
-func on_purchase_dialog_confirmed():
-	$DialogBackground.visible = false
-	var item = pending_purchase_item
+func _show_purchase_confirmation(item):
+	var confirmation_dialog_scene = DialogScene.instantiate()
+	confirmation_dialog_scene.positive_button_clicked.connect(_on_purchase_dialog_confirmed.bind(item))
+	confirmation_dialog_scene.show_dialog("confirmation", 
+		"purchase " + item.displayName + " for " + str(item.price) + " coins? ", 
+		"res://assets/basic_gui_bundle/Icons/SVG/Icon_Small_Coin.svg", 
+		"OK", 
+		"CANCEL")
+	add_child(confirmation_dialog_scene)
+		
+func _on_purchase_dialog_confirmed(item):
 	item["owned"] = true
 	GameData.money_total -= item["price"]
 	_display_money_total()
@@ -56,9 +59,6 @@ func on_purchase_dialog_confirmed():
 	_load_shop_items()
 	$PurchaseSound.play()
 	GameData.save_game()
-
-func _on_steve_dialog_negative_button_clicked():
-	$DialogBackground.visible = false
 
 func _equip_item(item):
 	_unequip_items_in_slot(item["slot"])
@@ -71,7 +71,6 @@ func _unequip_items_in_slot(slot):
 	for game_data_item in GameData.items:
 		if game_data_item.slot == slot:
 			game_data_item["equipped"] = false
-
 
 func _on_unequip_all_pressed():
 	for game_data_item in GameData.items:

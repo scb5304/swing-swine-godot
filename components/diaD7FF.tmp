@@ -21,17 +21,21 @@ font_size = 54
 font_color = Color(0.05, 0.05, 0.05, 0.721569)
 outline_color = Color(0, 0, 0, 1)
 
-[node name="Dialog" type="Container"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Dialog" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_so1k3")
 
 [node name="DialogBackground" type="TextureRect" parent="."]
 modulate = Color(0.24, 0.24, 0.24, 0.486275)
-layout_mode = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3.0
+offset_right = -3.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("1_8q3wn")
 
 [node name="DialogWindow" type="Window" parent="."]
@@ -124,5 +128,5 @@ text = "OK"
 flat = true
 autowrap_mode = 3
 
-[connection signal="pressed" from="DialogWindow/DialogPanel/NegativeButton" to="." method="_on_negative_button_pressed"]
-[connection signal="pressed" from="DialogWindow/DialogPanel/PositiveButton" to="." method="_on_positive_button_pressed"]
+[connection signal="pressed" from="DialogWindow/DialogPanel/NegativeButton" to="DialogWindow" method="_on_negative_button_pressed"]
+[connection signal="pressed" from="DialogWindow/DialogPanel/PositiveButton" to="DialogWindow" method="_on_positive_button_pressed"]
