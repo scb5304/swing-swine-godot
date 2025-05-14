@@ -44,12 +44,12 @@ func _confirm_buy_item(shop_item_scene, item):
 func _show_purchase_confirmation(item):
 	var confirmation_dialog_scene = DialogScene.instantiate()
 	confirmation_dialog_scene.positive_button_clicked.connect(_on_purchase_dialog_confirmed.bind(item))
+	add_child(confirmation_dialog_scene)
 	confirmation_dialog_scene.show_dialog("confirmation", 
 		"purchase " + item.displayName + " for " + str(item.price) + " coins? ", 
 		"res://assets/basic_gui_bundle/Icons/SVG/Icon_Small_Coin.svg", 
 		"OK", 
 		"CANCEL")
-	add_child(confirmation_dialog_scene)
 		
 func _on_purchase_dialog_confirmed(item):
 	item["owned"] = true

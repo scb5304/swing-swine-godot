@@ -1,4 +1,4 @@
-extends Control
+extends Popup
 
 signal positive_button_clicked
 signal negative_button_clicked
@@ -18,4 +18,8 @@ func show_dialog(title: String, message: String, icon: String, positive: String,
 	$DialogWindow/DialogPanel/Icon.texture = load(icon)
 	$DialogWindow/DialogPanel/PositiveButton.text = positive
 	$DialogWindow/DialogPanel/NegativeButton.text = negative
-	$DialogWindow.popup_centered()
+	
+	var viewport_size = get_parent().get_viewport().get_visible_rect().size
+	set_size(viewport_size)
+	
+	popup()

@@ -21,17 +21,19 @@ font_size = 54
 font_color = Color(0.05, 0.05, 0.05, 0.721569)
 outline_color = Color(0, 0, 0, 1)
 
-[node name="Dialog" type="Container"]
+[node name="Dialog" type="Popup"]
+transparent_bg = true
+visible = true
+transparent = true
+script = ExtResource("1_so1k3")
+
+[node name="DialogBackground" type="TextureRect" parent="."]
+modulate = Color(0.24, 0.24, 0.24, 0.486275)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_so1k3")
-
-[node name="DialogBackground" type="TextureRect" parent="."]
-modulate = Color(0.24, 0.24, 0.24, 0.486275)
-layout_mode = 2
 texture = ExtResource("1_8q3wn")
 
 [node name="DialogWindow" type="Window" parent="."]
