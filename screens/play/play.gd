@@ -16,6 +16,7 @@ var _piggy
 func _ready():
 	_piggy = $RotationZone/Piggy
 	_initialize_coins()
+	_initialize_music()
 	if GameData.high_score < 3:
 		_game_inactive = true
 		$TutorialPanel.visible = true
@@ -44,6 +45,12 @@ func _unhandled_input(event):
 	if event is InputEventScreenTouch:
 		if !_game_inactive:
 			_piggy.toggle_piggy_state(event.pressed)
+
+func _initialize_music():
+	if (randi() % 2 == 1):
+		$Sounds/Music1.set_stream(preload("res://assets/sounds/it comes_6.wav"))
+	else:
+		$Sounds/Music1.set_stream(preload("res://assets/sounds/progress_3.wav"))
 
 func _on_right_coin_body_entered(body):
 	_on_any_coin_hit($RotationZone/Coins/RightCoin)

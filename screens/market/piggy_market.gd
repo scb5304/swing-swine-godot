@@ -6,7 +6,7 @@ const DialogScene = preload("res://components/dialog.tscn")
 @onready var items_container = $ScrollContainer/VBoxContainer
 
 func _ready():
-	GameData.money_total = 10000
+	#GameData.money_total = 10000
 	_display_money_total()
 	_load_shop_items()
 	
