@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=3 uid="uid://ce8b4hgcgfiwc"]
+
+[ext_resource type="PackedScene" uid="uid://bhpnlwtvs15ws" path="res://components/background/background.tscn" id="1_34y33"]
+[ext_resource type="Script" path="res://screens/settings/about/about.gd" id="1_wgcau"]
+[ext_resource type="PackedScene" uid="uid://dpswdvhvedmmg" path="res://components/menu-button/menu_button_2.tscn" id="2_krmja"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4esr1"]
+font_size = 46
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+
+[node name="About" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wgcau")
+
+[node name="Background" parent="." instance=ExtResource("1_34y33")]
+self_modulate = Color(1, 1, 1, 0.643137)
+layout_mode = 2
+anchors_preset = 0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 45.0
+offset_top = 62.0
+offset_right = -37.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Bad Comic font by GGBot
+https://ggbot.itch.io/bad-comic-font
+
+Basic GUI bundle by Penzilla
+https://penzilla.itch.io/basic-gui-bundle
+
+Piggy Bank by ncmp
+https://pixabay.com/illustrations/piggybank-pig-bank-piggy-bank-472297/
+
+Other assorted art from pixabay.com
+
+Created in Godot
+
+Original music from yours truly ;)"
+label_settings = SubResource("LabelSettings_4esr1")
+autowrap_mode = 3
+
+[node name="MenuButton" parent="." instance=ExtResource("2_krmja")]
+layout_mode = 1
+anchors_preset = 7
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -437.0
+offset_top = -353.0
+offset_right = 435.0
+offset_bottom = -134.0
+grow_vertical = 0
+text = "back"
+
+[connection signal="pressed" from="MenuButton" to="." method="_on_back_button_pressed"]

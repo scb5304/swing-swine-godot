@@ -18,3 +18,6 @@ func _on_clear_app_data_confirmed():
 
 func _on_main_menu_button_pressed():
 	get_tree().change_scene_to_file("res://screens/menu/menu.tscn")
+
+func _on_about_button_pressed():
+	get_tree().change_scene_to_file("res://screens/settings/about/about.tscn")
