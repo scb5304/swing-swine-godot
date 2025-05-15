@@ -105,7 +105,6 @@ offset_right = 261.0
 offset_bottom = 183.0
 
 [node name="TutorialPanel" type="TextureRect" parent="."]
-visible = false
 modulate = Color(1, 1, 1, 0.831373)
 anchors_preset = 15
 anchor_right = 1.0
@@ -130,11 +129,11 @@ offset_right = 462.0
 offset_bottom = 420.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Your piggy will collect coins that match the coin color on its side.
+text = "Tap and hold to collect gold coins!
 
-When your finger is on the screen, it will accept cold goins. When you aren't touching the screen, it will collect silver coins!
+Let go to collect silver coins!
 
-Collect as many as you can. Good luck!"
+🐷💰 Try to collect as many as you can. Good luck!"
 label_settings = SubResource("LabelSettings_3ubq6")
 autowrap_mode = 3
 

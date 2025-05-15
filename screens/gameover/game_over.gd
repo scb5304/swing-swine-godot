@@ -12,6 +12,9 @@ func _ready():
 		is_high_score = true
 		
 	GameData.save_game()
+	
+	if (GameData.items.any(func(item): return item.get("owned"))):
+		$PiggyAd.visible = false
 		
 	var scoreStr: String = str(GameData.last_score)
 	if (GameData.last_score < 1):

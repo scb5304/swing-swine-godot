@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Swing Swine 2"
+config/name="Swing Swine"
 run/main_scene="res://screens/menu/menu.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://assets/images/brand/favicon.png"
