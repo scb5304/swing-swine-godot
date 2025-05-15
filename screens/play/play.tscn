@@ -105,6 +105,7 @@ offset_right = 261.0
 offset_bottom = 183.0
 
 [node name="TutorialPanel" type="TextureRect" parent="."]
+visible = false
 modulate = Color(1, 1, 1, 0.831373)
 anchors_preset = 15
 anchor_right = 1.0

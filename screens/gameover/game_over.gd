@@ -13,7 +13,7 @@ func _ready():
 		
 	GameData.save_game()
 	
-	if (GameData.items.any(func(item): return item.get("owned"))):
+	if (GameData.money_total <= 0 or GameData.items.any(func(item): return item.get("owned"))):
 		$PiggyAd.visible = false
 		
 	var scoreStr: String = str(GameData.last_score)

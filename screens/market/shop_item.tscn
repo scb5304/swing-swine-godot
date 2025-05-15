@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://b3x5h1144wgjd"]
+[gd_scene load_steps=11 format=3 uid="uid://b3x5h1144wgjd"]
 
 [ext_resource type="Script" path="res://screens/market/shop_item.gd" id="1_64t37"]
 [ext_resource type="Texture2D" uid="uid://jqhifh8cgbft" path="res://assets/images/accessories/shades.png" id="2_47dvm"]
 [ext_resource type="Texture2D" uid="uid://chrt8130d2f4f" path="res://assets/basic_gui_bundle/ButtonsText/SVG/ButtonText_Blank_TextInput.svg" id="2_pvwu8"]
+[ext_resource type="Texture2D" uid="uid://cqect6myx86dj" path="res://assets/basic_gui_bundle/Icons/SVG/Icon_Small_Coin.svg" id="3_epqas"]
 [ext_resource type="FontFile" uid="uid://6vlwn6vehsit" path="res://assets/fonts/bad_comic_font/TrueType (.ttf)/BadComic-Italic.ttf" id="4_wxug0"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_banju"]
@@ -117,14 +118,28 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 266.0
+offset_left = 272.0
 offset_top = -84.5
-offset_right = 338.0
+offset_right = 357.0
 offset_bottom = 89.5
 grow_vertical = 2
 text = "100"
 label_settings = SubResource("LabelSettings_ke5ks")
 vertical_alignment = 1
+
+[node name="PriceIcon" type="TextureRect" parent="Price"]
+self_modulate = Color(1, 1, 1, 0.678431)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -59.0
+offset_top = -24.0
+offset_right = 100.0
+offset_bottom = 135.0
+grow_vertical = 2
+scale = Vector2(0.325, 0.325)
+texture = ExtResource("3_epqas")
 
 [node name="IconWrapper" type="Control" parent="."]
 layout_mode = 1

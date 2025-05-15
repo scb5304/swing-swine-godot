@@ -159,14 +159,14 @@
 			"name":"americanHat",
 			"displayName":"Patriotic Hat",
 			"slot":"hat",
-			"price":5000,
+			"price":2500,
 			"piggyMarketEnabled":true
 		},
 		{
 			"name":"awardRibbon",
 			"displayName":"The Award Ribbon",
 			"slot":"chestaward",
-			"price":100000,
+			"price":20000,
 			"piggyMarketEnabled":true
 		}
 	]
