@@ -39,6 +39,8 @@ func load_game():
 	money_total = data.get("money_total", 0)
 	setting_sound_effects_enabled = data.get("setting_sound_effects_enabled", true)
 	setting_music_enabled = data.get("setting_music_enabled", true)
+	
+	#TODO: Add ability to add new items from latest accessories JSON
 	items = data.get("items", GameData.load_json_file("res://assets/images/accessories/piggyAccessories.json").get("accessories", []))
 	init_audio_bus()
 

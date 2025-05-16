@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://b5uv7u2kbliqw"]
 
 [ext_resource type="Texture2D" uid="uid://cjodnq5kupikp" path="res://assets/images/brand/gray.png" id="1_8q3wn"]
-[ext_resource type="Script" path="res://components/dialog.gd" id="1_so1k3"]
+[ext_resource type="Script" path="res://components/dialog/dialog.gd" id="1_so1k3"]
 [ext_resource type="Texture2D" uid="uid://c6cxsmjbtf5k8" path="res://assets/images/brand/white.png" id="2_g8ekw"]
 [ext_resource type="Texture2D" uid="uid://cqect6myx86dj" path="res://assets/basic_gui_bundle/Icons/SVG/Icon_Small_Coin.svg" id="2_sxpg5"]
 

@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 const ShopItemScene = preload("res://screens/market/shop_item.tscn")
-const DialogScene = preload("res://components/dialog.tscn")
+const DialogScene = preload("res://components/dialog/dialog.tscn")
 
 @onready var items_container = $ScrollContainer/VBoxContainer
 

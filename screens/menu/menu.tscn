@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://screens/menu/menu.gd" id="1_qt6qt"]
 [ext_resource type="PackedScene" uid="uid://bhpnlwtvs15ws" path="res://components/background/background.tscn" id="2_yi7g0"]
-[ext_resource type="PackedScene" uid="uid://dpswdvhvedmmg" path="res://components/menu-button/menu_button_2.tscn" id="3_pvieo"]
+[ext_resource type="PackedScene" uid="uid://dpswdvhvedmmg" path="res://components/menu-button/menu_button.tscn" id="3_pvieo"]
 [ext_resource type="Texture2D" uid="uid://c07o0du3174l8" path="res://assets/basic_gui_bundle/Icons/Icon_Small_Blank_Arrow.png" id="4_68j1f"]
 [ext_resource type="Texture2D" uid="uid://dgqmrmi6ixsdp" path="res://assets/images/game/piggy_plain.png" id="4_232b5"]
 [ext_resource type="Texture2D" uid="uid://dkgw8selx4pkw" path="res://assets/basic_gui_bundle/Icons/Icon_Small_Coin.png" id="5_k2cee"]

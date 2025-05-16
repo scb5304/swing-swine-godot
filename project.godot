@@ -15,6 +15,10 @@ run/main_scene="res://screens/menu/menu.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://assets/images/brand/favicon.png"
 
+[audio]
+
+buses/default_bus_layout="res://components/audio/default_bus_layout.tres"
+
 [autoload]
 
 GameData="*res://global/game_data.gd"

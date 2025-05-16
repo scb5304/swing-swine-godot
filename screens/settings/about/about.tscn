@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bhpnlwtvs15ws" path="res://components/background/background.tscn" id="1_34y33"]
 [ext_resource type="Script" path="res://screens/settings/about/about.gd" id="1_wgcau"]
-[ext_resource type="PackedScene" uid="uid://dpswdvhvedmmg" path="res://components/menu-button/menu_button_2.tscn" id="2_krmja"]
+[ext_resource type="PackedScene" uid="uid://dpswdvhvedmmg" path="res://components/menu-button/menu_button.tscn" id="2_krmja"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4esr1"]
 font_size = 46

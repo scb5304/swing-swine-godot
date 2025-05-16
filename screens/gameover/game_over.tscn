@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://screens/gameover/game_over.gd" id="1_20b8p"]
 [ext_resource type="PackedScene" uid="uid://bhpnlwtvs15ws" path="res://components/background/background.tscn" id="2_ylboh"]
 [ext_resource type="PackedScene" uid="uid://dp2cu3b6eoq44" path="res://components/piggycoincount/piggy_coin_count.tscn" id="3_q4dr2"]
-[ext_resource type="PackedScene" uid="uid://dpswdvhvedmmg" path="res://components/menu-button/menu_button_2.tscn" id="4_jb1k2"]
-[ext_resource type="Theme" uid="uid://c7dkyme878fgs" path="res://components/button_theme.tres" id="4_ogobv"]
+[ext_resource type="PackedScene" uid="uid://dpswdvhvedmmg" path="res://components/menu-button/menu_button.tscn" id="4_jb1k2"]
+[ext_resource type="Theme" uid="uid://c7dkyme878fgs" path="res://components/menu-button/button_theme.tres" id="4_ogobv"]
 [ext_resource type="AudioStream" uid="uid://bphbn0dy130mj" path="res://assets/sounds/high_score.mp3" id="5_a3xye"]
 [ext_resource type="Texture2D" uid="uid://cbjdqg7wcinmb" path="res://assets/basic_gui_bundle/Icons/SVG/Icon_Small_Blank_Arrow.svg" id="5_umx6a"]
 

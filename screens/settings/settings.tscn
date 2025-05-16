@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://screens/settings/settings.gd" id="1_erh5t"]
 [ext_resource type="PackedScene" uid="uid://bhpnlwtvs15ws" path="res://components/background/background.tscn" id="2_al6c0"]
-[ext_resource type="Theme" uid="uid://c7dkyme878fgs" path="res://components/button_theme.tres" id="3_72c0o"]
+[ext_resource type="Theme" uid="uid://c7dkyme878fgs" path="res://components/menu-button/button_theme.tres" id="3_72c0o"]
 [ext_resource type="Texture2D" uid="uid://cdceit128dnlq" path="res://assets/images/icons/icon.svg" id="3_oesuo"]
 [ext_resource type="PackedScene" uid="uid://mp5khaij8tqc" path="res://components/audio/sound_button.tscn" id="3_ul6sq"]
-[ext_resource type="PackedScene" uid="uid://dpswdvhvedmmg" path="res://components/menu-button/menu_button_2.tscn" id="4_031au"]
+[ext_resource type="PackedScene" uid="uid://dpswdvhvedmmg" path="res://components/menu-button/menu_button.tscn" id="4_031au"]
 [ext_resource type="PackedScene" uid="uid://bc4sgbj5vetsv" path="res://components/audio/music_button.tscn" id="4_nwecf"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_2hag6"]

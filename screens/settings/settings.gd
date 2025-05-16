@@ -1,5 +1,5 @@
 extends CanvasLayer
-const DialogScene = preload("res://components/dialog.tscn")
+const DialogScene = preload("res://components/dialog/dialog.tscn")
 
 func _on_clear_app_data_button_pressed():
 	var confirmation_dialog_scene = DialogScene.instantiate()
