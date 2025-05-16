@@ -5,3 +5,4 @@ assets/basic_gui_bundle
 assets/fonts
 *.apk
 *.bat
+*.tmp
